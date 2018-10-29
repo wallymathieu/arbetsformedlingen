@@ -10,6 +10,9 @@
     <None Include="*.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="*.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <PackageReference Include="FSharp.Data" Version="3.0.0" />
   </ItemGroup>
 </Project>

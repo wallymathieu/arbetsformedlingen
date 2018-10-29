@@ -69,7 +69,7 @@ module Text=
       let index = text.IndexOf postfix
       if index >0 then Some (postfix,index) else None
     match postfixWords |> List.tryPick pickPostfix with
-    | Some (postfix,index)-> text.Insert(index, "-")
+    | Some (_,index)-> text.Insert(index, "-")
     | None -> text
   let normalize = mapAlias >> insertPostFix
 
@@ -92,8 +92,26 @@ module Text=
   let otherChars = ['/';')';'('; '•';'·';'\'';'"';'’';'-';'_';'*';'–']
   let splitChars = whitespaceChars @ punctuationChars @ andChars @ otherChars |> List.toArray
   let splitOnChars (text:string)=text.Split(splitChars, StringSplitOptions.RemoveEmptyEntries)
-
-
+module ProgrammingLanguages=
+  type T =HtmlProvider<"./Timeline-of-programming-languages-Wikipedia.htm">
+  let t =T.Load("./Timeline-of-programming-languages-Wikipedia.htm")
+  let inline getName< ^a when ^a : ( member get_Name: unit->String )>(r:^a) =
+    ( ^a : ( member get_Name: unit->String ) (r) )
+  let probNotRelevant = ["e";"it"]
+  let rows = [ t.Tables.``1950s``.Rows |> Array.map getName
+               t.Tables.``1960s``.Rows |> Array.map getName
+               t.Tables.``1970s``.Rows |> Array.map getName
+               t.Tables.``1980s``.Rows |> Array.map getName
+               t.Tables.``1990s``.Rows |> Array.map getName
+               t.Tables.``1990s``.Rows |> Array.map getName
+               t.Tables.``2000s``.Rows |> Array.map getName
+               t.Tables.``2010s``.Rows |> Array.map getName
+             ]
+             |> List.collect List.ofArray
+             |> List.map (fun s->s.ToLower())
+             |> List.filter (fun s-> not <| List.contains s probNotRelevant )
+             |> set
+             
 module Annons=
   type Annons={
       id:string
@@ -116,8 +134,22 @@ module Annons=
     let loaded = files 
                     |> Array.map loadAndMap 
                     |> Array.toList
-    let wordCounts= loaded
-                    |> List.collect (fun a->  splitAndFilter a.title @ splitAndFilter a.text)
+
+
+    let onlyLangs = List.filter (fun s->Set.contains s ProgrammingLanguages.rows )
+    let splitOnChars (text:string)=
+        let splitChars = Text.punctuationChars@ Text.whitespaceChars |>List.toArray
+        text.Split(splitChars, StringSplitOptions.RemoveEmptyEntries) |> List.ofArray
+    let adAndLanguage =loaded
+                       |> List.map (fun a-> a.id, splitOnChars a.title @ splitOnChars a.text 
+                                                  |> List.map (fun s->s.ToLower()) 
+                                                  |> onlyLangs |> List.distinct )
+    let langTags = adAndLanguage
+                   |> List.map (fun (id,list)-> sprintf "%s : %s" id (String.concat ", " list) )
+                   |> String.concat "\n"
+    File.WriteAllText ("langs.txt", langTags)
+    let wordCounts= adAndLanguage
+                    |> List.collect (fun (_, langs)-> langs)
                     |> List.groupBy (fun s->s.ToLower())
                     |> List.map (fun (s,l)->(s,l.Length))
                     |> List.filter(fun (_,l)->l>1)
@@ -125,10 +157,7 @@ module Annons=
               |> List.sortByDescending (fun (_,l)->l)
               |> List.map (fun (s,l)-> sprintf "%d : %s" l s )
               |> String.concat "\n" 
-
-    File.WriteAllText ("list.txt", txt)
-    
-    
+    File.WriteAllText ("list-langs.txt", txt)
 module Main=
 
     [<EntryPoint>]
