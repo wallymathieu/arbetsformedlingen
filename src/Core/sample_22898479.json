@@ -1,1 +1,51 @@
-{"platsannons":{"annons":{"annonsid":"22898479","platsannonsUrl":"https://www.arbetsformedlingen.se/Tjanster/Arbetssokande/Platsbanken/annonser/22898479","annonsrubrik":"Senior Javautvecklare","annonstext":"Dina arbetsuppgifter kommer att innefatta det mesta som finns att hitta inom systemutveckling, och du är med i alla dess faser, från kontakt med beställare till leverans av färdigt system och produkt. Arbetet är omväxlande och rör sig i många fall även i gränslandet mellan hårdvara och mjukvara. Då de flesta av våra kunder finns runt om i Europa förutsätter vi att Du behärskar engelska i tal och skrift. Ytterligare kunskaper i fler språk värdesätts. För att få en jämnare könsfördelning på vår arbetsplats ser vi gärna kvinnliga sökande.\n\nDu som söker skall ha:\n•\tutmärkta färdigheter och kunskap inom Java EE och Spring\n•\tmycket goda färdigheter och kunskap inom SQL och relationsdatabaskoncept i allmänhet \n        samt PostgreSQL.\n•\tvara väl insatt i HTTP-protokollets uppbyggnad och funktion\n•\terfarenhet av utveckling av system i storskalig och kontinuerlig drift\n•\tgod förståelse och erfarenhet av agila processer\n•\trelevant utbildning från högskola/universitet\n•\tminst 7-10 års arbetslivserfarenhet inom området\n\nVi ser gärna att du även:\n•\thar övergripande förståelse av TCP/IP samt applicerad kryptografi\n•\tförstår koncept härrörande till funktionell programmering, och deras egenskaper\n•\tförstår hur man effektivt jobbar med tvåvägs-strömmande data och långlivade processer\n•\tbehärskar minst ett universellt skriptspråk, såsom Perl eller Python\n•\thar erfarenhet av app-utveckling ovanpå PaaS-plattformar som Heroku, \n        Elastic Beanstalk och App Engine\n•\thar erfarenhet av att bygga lösningar på Amazon Web Services\n•\thar erfarenhet av Docker och containerisering\n•\thar kunskap inom GNU/Linux userland\n•\taktivt bidragit till open source-projekt\n\nAUTOCOM är ett högteknologiskt företag som utvecklar, producerar och marknadsför avancerad felsökningsutrustning för fordonselektronik. Vårt varumärke och produktkoncept är idag väletablerat på den europeiska marknaden och återfinns även hos större aktörer inom fordonseftermarknad. AUTOCOM har idag över 70 anställda och en god kontinuerlig tillväxt både på den ekonomiska sidan och på personalsidan. AUTOCOM ingår sedan hösten 2002 i den världsomspännande Würth-koncernen med mer än 70 000 anställda world-wide.","yrkesbenamning":"Mjukvaruutvecklare","yrkesid":80,"publiceraddatum":"2018-10-26T00:00:00+02:00","antal_platser":"1","kommunnamn":"Trollhättan","kommunkod":1488,"antalplatserVisa":1,"anstallningstyp":"Vanlig anställning"},"villkor":{"varaktighet":"Tillsvidare","arbetstid":"Heltid","lonetyp":"Fast månads- vecko- eller timlön"},"ansokan":{"referens":"Senior Javautvecklare","epostadress":"career@wow-group.com","sista_ansokningsdag":"2019-01-13T23:59:59+01:00","ovrigt_om_ansokan":"Ansökan\nSkicka in din ansökan med CV och personligt brev till career@wow-group.com, märk mejlet med [Senior Javautvecklare] i ämnesfältet. Intervjuer och utvärdering av kandidater sker löpande, så ansök redan idag!\nFör ytterligare information, kontakta Martin Andersson på 0733-547724."},"arbetsplats":{"arbetsplatsnamn":"AUTOCOM DIAGNOSTIC PARTNER AKTIEBOLAG","postnummer":"46138","postadress":"GRAFITVÄGEN 23","postort":"TROLLHÄTTAN","postland":"Sverige","land":"Sverige","besoksadress":"GRAFITVÄGEN 23","hemsida":"http://www.autocom.se","kontaktpersonlista":{"kontaktpersondata":[{"namn":"Martin Andersson","epostadress":"martin.andersson@wow-group.com","mobilnummer":"0733-547724"}]},"besoksort":"TROLLHÄTTAN","telefonnummer":"0520470700"},"krav":{"egenbil":false}}}
+{
+  "platsannons": {
+    "annons": {
+      "annonsid": "22898479b",
+      "platsannonsUrl": "https://www.arbetsformedlingen.se/Tjanster/Arbetssokande/Platsbanken/annonser/22898479",
+      "annonsrubrik": "Senior Javautvecklare",
+      "annonstext": "Dina arbetsuppgifter kommer att innefatta det mesta som finns att hitta inom systemutveckling, och du är med i alla dess faser, från kontakt med beställare till leverans av färdigt system och produkt. Arbetet är omväxlande och rör sig i många fall även i gränslandet mellan hårdvara och mjukvara. Då de flesta av våra kunder finns runt om i Europa förutsätter vi att Du behärskar engelska i tal och skrift. Ytterligare kunskaper i fler språk värdesätts. För att få en jämnare könsfördelning på vår arbetsplats ser vi gärna kvinnliga sökande.\n\nDu som söker skall ha:\n•\tutmärkta färdigheter och kunskap inom Java EE och Spring\n•\tmycket goda färdigheter och kunskap inom SQL och relationsdatabaskoncept i allmänhet \n        samt PostgreSQL.\n•\tvara väl insatt i HTTP-protokollets uppbyggnad och funktion\n•\terfarenhet av utveckling av system i storskalig och kontinuerlig drift\n•\tgod förståelse och erfarenhet av agila processer\n•\trelevant utbildning från högskola/universitet\n•\tminst 7-10 års arbetslivserfarenhet inom området\n\nVi ser gärna att du även:\n•\thar övergripande förståelse av TCP/IP samt applicerad kryptografi\n•\tförstår koncept härrörande till funktionell programmering, och deras egenskaper\n•\tförstår hur man effektivt jobbar med tvåvägs-strömmande data och långlivade processer\n•\tbehärskar minst ett universellt skriptspråk, såsom Perl eller Python\n•\thar erfarenhet av app-utveckling ovanpå PaaS-plattformar som Heroku, \n        Elastic Beanstalk och App Engine\n•\thar erfarenhet av att bygga lösningar på Amazon Web Services\n•\thar erfarenhet av Docker och containerisering\n•\thar kunskap inom GNU/Linux userland\n•\taktivt bidragit till open source-projekt\n\nAUTOCOM är ett högteknologiskt företag som utvecklar, producerar och marknadsför avancerad felsökningsutrustning för fordonselektronik. Vårt varumärke och produktkoncept är idag väletablerat på den europeiska marknaden och återfinns även hos större aktörer inom fordonseftermarknad. AUTOCOM har idag över 70 anställda och en god kontinuerlig tillväxt både på den ekonomiska sidan och på personalsidan. AUTOCOM ingår sedan hösten 2002 i den världsomspännande Würth-koncernen med mer än 70 000 anställda world-wide.",
+      "yrkesbenamning": "Mjukvaruutvecklare",
+      "yrkesid": 80,
+      "publiceraddatum": "2018-10-26T00:00:00+02:00",
+      "antal_platser": "1",
+      "kommunnamn": "Trollhättan",
+      "kommunkod": 1488,
+      "antalplatserVisa": 1,
+      "anstallningstyp": "Vanlig anställning"
+    },
+    "villkor": {
+      "varaktighet": "Tillsvidare",
+      "arbetstid": "Heltid",
+      "lonetyp": "Fast månads- vecko- eller timlön"
+    },
+    "ansokan": {
+      "referens": "Senior Javautvecklare",
+      "epostadress": "career@wow-group.com",
+      "sista_ansokningsdag": "2019-01-13T23:59:59+01:00",
+      "ovrigt_om_ansokan": "Ansökan\nSkicka in din ansökan med CV och personligt brev till career@wow-group.com, märk mejlet med [Senior Javautvecklare] i ämnesfältet. Intervjuer och utvärdering av kandidater sker löpande, så ansök redan idag!\nFör ytterligare information, kontakta Martin Andersson på 0733-547724."
+    },
+    "arbetsplats": {
+      "arbetsplatsnamn": "AUTOCOM DIAGNOSTIC PARTNER AKTIEBOLAG",
+      "postnummer": "46138",
+      "postadress": "GRAFITVÄGEN 23",
+      "postort": "TROLLHÄTTAN",
+      "postland": "Sverige",
+      "land": "Sverige",
+      "besoksadress": "GRAFITVÄGEN 23",
+      "hemsida": "http://www.autocom.se",
+      "kontaktpersonlista": {
+        "kontaktpersondata": [
+          {
+            "namn": "Martin Andersson",
+            "epostadress": "martin.andersson@wow-group.com",
+            "mobilnummer": "0733-547724"
+          }
+        ]
+      },
+      "besoksort": "TROLLHÄTTAN",
+      "telefonnummer": "0520470700"
+    },
+    "krav": { "egenbil": false }
+  }
+}
