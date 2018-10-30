@@ -14,9 +14,11 @@ module Utv=
         let file_name (a:Annons) = sprintf "data/%s.json" a.id
         // /platsannonser/
         let url (a:Annons)= sprintf "http://api.arbetsformedlingen.se/af/v0/platsannonser/%s" a.id
-// http://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?yrkesid=80&sida=0&antalrader=1000
-// Accept : application/json
-// Accept-Language : sv
+    let pullList ()=
+        let u = "http://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?yrkesid=80&sida=0&antalrader=1000"
+        let outPath = Path.Combine(Directory.GetCurrentDirectory(), "./platsannonser_yrkesid_80.json")
+        File.WriteAllText(outPath, Http.RequestString( url= u, httpMethod="GET", headers = [ "Accept", "application/json"; "Accept-Language", "sv"]))
+
     type Platsannonser= JsonProvider<"./platsannonser_yrkesid_80.json">
     let platsannonser =Platsannonser.Load "./platsannonser_yrkesid_80.json"
     let matchingsdata= platsannonser.Matchningslista.Matchningdata
@@ -40,6 +42,7 @@ module Utv=
         for a in matchingsdata do
             printfn "%s : %s" a.id a.title
     let getAll ()=
+        pullList ()
         for a in matchingsdata do
             tryPull a
 
@@ -95,8 +98,7 @@ module Text=
 module ProgrammingLanguages=
   type T =HtmlProvider<"./Timeline-of-programming-languages-Wikipedia.htm">
   let t =T.Load("./Timeline-of-programming-languages-Wikipedia.htm")
-  let inline getName< ^a when ^a : ( member get_Name: unit->String )>(r:^a) =
-    ( ^a : ( member get_Name: unit->String ) (r) )
+  let inline getName(r:^a) = ( ^a : ( member get_Name: unit->String ) (r) )
   let probNotRelevant = ["e";"it"]
   let rows = [ t.Tables.``1950s``.Rows |> Array.map getName
                t.Tables.``1960s``.Rows |> Array.map getName
