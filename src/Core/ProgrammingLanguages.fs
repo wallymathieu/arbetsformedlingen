@@ -6,7 +6,7 @@ module private Internal=
     let t =T.Load("./Timeline-of-programming-languages-Wikipedia.htm")
     let inline getName(r:^a) = ( ^a : ( member get_Name: unit->String ) (r) )
     // since go is a word commonly used, it's difficult to pick out
-    let probNotRelevant = ["e";"it";"small";"go";"clean"; "name"; "s"; "k"; "q"; "p"; "red"; "rapid"; "d"; "b"; "ml"; "spark"; "processing"; "basic"; "print"; "ring"; "links"; "scratch"; "factor"; "pilot"; "plus"]
+    let probNotRelevant = ["e";"it";"small";"go";"clean"; "name"; "s"; "k"; "q"; "p"; "red"; "rapid"; "d"; "b"; "ml"; "spark"; "processing"; "basic"; "print"; "ring"; "links"; "scratch"; "factor"; "pilot"; "plus"; "actor"]
 
 open Internal
 let names =
@@ -24,3 +24,4 @@ let names =
          |> List.filter (fun s-> not <| List.contains s probNotRelevant )
          |> List.append ["golang"]
          |> set
+

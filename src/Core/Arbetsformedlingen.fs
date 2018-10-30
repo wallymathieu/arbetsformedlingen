@@ -74,7 +74,7 @@ module Platsannonser=
         |> Platsannonser.Parse
     let mapToAnnons (md:Platsannonser.Matchningdata)=
         {
-            id= md.Annonsid.JsonValue.AsString()
+            id= md.Annonsid
             title = md.Annonsrubrik
             url = md.Annonsurl
             relevans = md.Relevans }

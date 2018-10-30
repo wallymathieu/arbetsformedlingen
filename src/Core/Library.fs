@@ -5,13 +5,14 @@ open FSharp.Data
 open Arbetsformedlingen
 
 module Utv=
-    let fetchList ()=
-        let outPath = Path.Combine(Directory.GetCurrentDirectory(), "./platsannonser_yrkesid_80.json")
-
-        let q={ Platsannonser.defaultQuery with YrkesId=Some 80; Sida=Some 0; AntalRader=Some 2000 }
+    let fetchList (yrkesId)=
+        let outPath = Path.Combine(Directory.GetCurrentDirectory(), "list", sprintf "platsannonser_yrkesid_%d.json" yrkesId)
+        if not <| File.Exists outPath then 
+          File.WriteAllText (outPath, "")
+        let q={ Platsannonser.defaultQuery with YrkesId=Some yrkesId; Sida=Some 0; AntalRader=Some 2000 }
         let res = Platsannonser.query q
         
-        use out= new FileStream(outPath, FileMode.OpenOrCreate ||| FileMode.Truncate, FileAccess.Write, FileShare.Read)
+        use out= new FileStream(outPath, FileMode.Truncate, FileAccess.Write, FileShare.Read)
         use writer = new StreamWriter(out)
         res.JsonValue.WriteTo(writer, JsonSaveOptions.None)
 
@@ -25,12 +26,24 @@ module Utv=
                 printfn "Couldn't download ad %s due to %O" a.id err
 
     let fetchListAndAds ()=
-        fetchList ()
-        let platsannonser =Platsannonser.Load "./platsannonser_yrkesid_80.json"
-        let matchingsdata= platsannonser.Matchningslista.Matchningdata
-                            |> Array.map Platsannonser.mapToAnnons
-        for a in matchingsdata do
-            tryFetchAd a
+      
+      fetchList 80      
+      fetchList 2419
+      fetchList 7633
+      fetchList 7632
+      fetchList 7576
+      let listFile = Directory.GetFiles("./list/","*.json")
+      let currentDir =Directory.GetCurrentDirectory()
+      let loadAndMap (f:string)=
+        let file = Path.Combine(currentDir, f)
+        let platsannonser = Platsannonser.Load file
+        platsannonser.Matchningslista.Matchningdata
+        |> Array.map Platsannonser.mapToAnnons
+      let matchingsdata = listFile 
+                          |> Array.map loadAndMap
+                          |> Array.collect id
+      for a in matchingsdata do
+          tryFetchAd a
 
 module Text=
   let alias =[ 
@@ -90,7 +103,7 @@ module Text=
 module Annons=
   //let t = T.Load "./sample_22898479.json"
   let writeLangCount ()=
-    let files = Directory.GetFiles("./data/")
+    let files = Directory.GetFiles("./data/","*.json")
     let currentDir =Directory.GetCurrentDirectory()
     let loadAndMap (f:string)=
       let file = Path.Combine(currentDir, f)
