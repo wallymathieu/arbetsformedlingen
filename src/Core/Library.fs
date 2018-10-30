@@ -44,8 +44,9 @@ module Text=
               ["backend"; "back-end"; "back end"], "_backend_"
               ["fullstack"; "full-stack"; "full stack"], "_fullstack_"
               ["r & d"; ], "_research_and_development_"
-              ["c ++";], "_c++_"
-              ["c #"; ], "_c#_"
+              ["c ++"; ], "_c++_"
+              ["c #"; "csharp"], "_c#_"
+              ["f #"; "fsharp"], "_f#_"
               [".net";], "_dotnet_"
              ]
              //|> List.map (fun (alias,to')->set alias,to')
