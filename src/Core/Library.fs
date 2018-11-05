@@ -101,7 +101,9 @@ module Text=
              
 module Annons=
   //let t = T.Load "./sample_22898479.json"
-  let writeLangCount dir=
+  type AdAndLanguage = string * string list
+  type WordCount=string * int
+  let getLangCount dir : (AdAndLanguage list * WordCount list)=
     let files = Directory.GetFiles(Path.Combine(dir, "data"),"*.json")
     let loadAndMap (f:string)=
       let file = Path.Combine(dir, f)
@@ -128,15 +130,18 @@ module Annons=
                        |> List.map (fun (a,text)-> a.id, splitOnChars a.title @ splitOnChars text
                                                   |> List.map (fun s->s.ToLower()) 
                                                   |> onlyLangs |> List.distinct )
-    let langTags = adAndLanguage
-                   |> List.map (fun (id,list)-> sprintf "%s : %s" id (String.concat ", " list) )
-                   |> String.concat "\n"
-    File.WriteAllText ("langs.txt", langTags)
     let wordCounts= adAndLanguage
                     |> List.collect (fun (_, langs)-> langs)
                     |> List.groupBy (fun s->s.ToLower())
                     |> List.map (fun (s,l)->(s,l.Length))
-                    //|> List.filter(fun (_,l)->l>1)
+    (adAndLanguage, wordCounts)
+
+  let writeLangCount dir=
+    let (adAndLanguage, wordCounts) = getLangCount dir
+    let langTags = adAndLanguage
+                   |> List.map (fun (id,list)-> sprintf "%s : %s" id (String.concat ", " list) )
+                   |> String.concat "\n"
+    File.WriteAllText ("langs.txt", langTags)
     let txt =wordCounts
               |> List.sortByDescending (fun (_,l)->l)
               |> List.map (fun (s,l)-> sprintf "%d : %s" l s )
