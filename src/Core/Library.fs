@@ -18,7 +18,7 @@ module Utv=
         res.JsonValue.WriteTo(writer, JsonSaveOptions.None)
 
     let tryFetchAd a dir=
-        let fn = Path.Combine(dir, "data", Annons.id a)
+        let fn = Path.Combine(dir, "data", sprintf "%s.json" <| Annons.id a)
         if not <| File.Exists fn then
             match Annons.tryDownload a with
             | Ok res -> 
