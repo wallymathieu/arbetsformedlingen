@@ -1,5 +1,5 @@
 module Main
-open Library
+open Arbetsformedlingen.Library
 open System.IO
 type CmdArgs = 
   { Command : string option; Dir: string

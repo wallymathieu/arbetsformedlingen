@@ -1,4 +1,4 @@
-module Arbetsformedlingen
+module Arbetsformedlingen.Integration
 open System
 open System.IO
 open FSharp.Data
