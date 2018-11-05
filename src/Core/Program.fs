@@ -1,19 +1,23 @@
 module Main
 open Library
+open System.IO
 type CmdArgs = 
-  { Command : string option
+  { Command : string option; Dir: string
   }
 [<EntryPoint>]
 let main argv =
-    let defaultArgs = { Command = None }
+    let defaultArgs = { Command = None; Dir= Directory.GetCurrentDirectory() }
     let usage =
          ["Usage:"
-          "    --command COMMAND    command"] |> String.concat System.Environment.NewLine
+          sprintf "    --dir     DIRECTORY  where to store data (Default: %s)" defaultArgs.Dir
+          "    --command COMMAND    one of [fetch-files, write-lang-count]"] 
+          |> String.concat System.Environment.NewLine
 
     let rec parseArgs b args = 
       match args with
       | [] -> b
       | "--command" :: command :: xs -> parseArgs { b with Command = Some command } xs
+      | "--dir" :: dir :: xs -> parseArgs { b with Dir = dir } xs
       | invalidArgs -> 
         printfn "error: invalid arguments %A" invalidArgs
         printfn "%s" usage
@@ -21,13 +25,13 @@ let main argv =
     
     let args = argv |> List.ofArray |> parseArgs defaultArgs
     match args with
-    | { Command=Some command } ->
+    | { Command=Some command; Dir=dir } ->
         match command with
         | "fetch-files" -> 
-          Utv.fetchListAndAds()
+          Utv.fetchListAndAds dir
           0
         | "write-lang-count" ->
-          Annons.writeLangCount()
+          Annons.writeLangCount dir
           0
         | _ ->
           printfn "error: Expected command"

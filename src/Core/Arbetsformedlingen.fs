@@ -12,8 +12,7 @@ type Annons={
 }
 type WithText<'a>=('a*string)
 module Annons=
-    /// default filename for ad
-    let filename (a:Annons) = sprintf "data/%s.json" a.id
+    let id (a:Annons)=a.id
     // /platsannonser/
     let url (a:Annons)= sprintf "http://api.arbetsformedlingen.se/af/v0/platsannonser/%s" a.id
     let tryDownload a=
