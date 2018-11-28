@@ -10,7 +10,7 @@ module private Internal=
                            "s"; "k"; "q"; "p"; "red"; "rapid"; "d"
                            "b"; "ml"; "spark"; "processing"; "basic"
                            "print"; "ring"; "links"; "scratch"; "factor"
-                           "pilot"; "plus"; "actor"; "joy"]
+                           "pilot"; "plus"; "actor"; "joy"; "fact"; "hack"]
 
 open Internal
 let names =

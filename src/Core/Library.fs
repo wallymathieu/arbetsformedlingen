@@ -51,29 +51,30 @@ module Annons=
   //let t = T.Load "./sample_22898479.json"
   type AdAndLanguage = string * string list
   type WordCount=string * int
+  let splitAndFilter (text:string)=
+    Text.normalize text 
+    |> Text.splitOnChars
+    |> Array.toList
+  let loadAndMap dir (f:string) =
+    let file = Path.Combine(dir, f)
+    let content = File.ReadAllText file
+    if String.IsNullOrEmpty content then
+      None
+    else   
+      let t = Annons.Complete.Parse content
+      Some <| Annons.mapComplete t.Platsannons.Annons
+  let splitOnWSAndPunctuationChars (text:string)=
+      let splitChars = Text.punctuationChars@ Text.whitespaceChars |>List.toArray
+      text.Split(splitChars, StringSplitOptions.RemoveEmptyEntries) |> List.ofArray
+
   let getLangCount dir : (AdAndLanguage list * WordCount list)=
     let files = Directory.GetFiles(Path.Combine(dir, "data"),"*.json")
-    let loadAndMap (f:string)=
-      let file = Path.Combine(dir, f)
-      let content = File.ReadAllText file
-      if String.IsNullOrEmpty content then
-        None
-      else   
-        let t = Annons.Complete.Parse content
-        Some <| Annons.mapComplete t.Platsannons.Annons
-    let splitAndFilter (text:string)=
-      Text.normalize text 
-      |> Text.splitOnChars
-      |> Array.toList
+    let loadAndMap = loadAndMap dir
     let loaded = files 
                     |> Array.choose loadAndMap 
                     |> Array.toList
-
-
+    let splitOnChars = splitOnWSAndPunctuationChars
     let onlyLangs = List.filter (fun s->Set.contains s ProgrammingLanguages.names )
-    let splitOnChars (text:string)=
-        let splitChars = Text.punctuationChars@ Text.whitespaceChars |>List.toArray
-        text.Split(splitChars, StringSplitOptions.RemoveEmptyEntries) |> List.ofArray
     let adAndLanguage =loaded
                        |> List.map (fun (a,text)-> a.id, splitOnChars a.title @ splitOnChars text
                                                   |> List.map (fun s->s.ToLower()) 
@@ -83,7 +84,21 @@ module Annons=
                     |> List.groupBy (fun s->s.ToLower())
                     |> List.map (fun (s,l)->(s,l.Length))
     (adAndLanguage, wordCounts)
-
+  let getWordCount dir : (WordCount list)=
+    let files = Directory.GetFiles(Path.Combine(dir, "data"),"*.json")
+    let loadAndMap = loadAndMap dir
+    let loaded = files 
+                    |> Array.choose loadAndMap 
+                    |> Array.toList
+    let splitOnChars = splitOnWSAndPunctuationChars
+    let wordCounts= loaded
+                    |> List.map (fun (a,text)-> a.id, splitOnChars a.title @ splitOnChars text
+                                              |> List.map (fun s->s.ToLower()) 
+                                              |> List.distinct )
+                    |> List.collect (fun (_, words)-> words)
+                    |> List.groupBy (fun s->s.ToLower())
+                    |> List.map (fun (s,l)->(s,l.Length))
+    wordCounts
   let writeLangCount dir=
     let (adAndLanguage, wordCounts) = getLangCount dir
     let langTags = adAndLanguage
@@ -95,3 +110,10 @@ module Annons=
               |> List.map (fun (s,l)-> sprintf "%d : %s" l s )
               |> String.concat "\n" 
     File.WriteAllText ("list-langs.txt", txt)
+    let wordCounts = getWordCount dir
+    let txt =wordCounts
+              |> List.sortByDescending (fun (_,l)->l)
+              |> List.map (fun (s,l)-> sprintf "%d : %s" l s )
+              |> String.concat "\n" 
+    File.WriteAllText ("list-words.txt", txt)
+    
