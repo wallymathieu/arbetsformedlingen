@@ -64,7 +64,7 @@ module Annons=
       let t = Annons.Complete.Parse content
       Some <| Annons.mapComplete t.Platsannons.Annons
   let splitOnWSAndPunctuationChars (text:string)=
-      let splitChars = Text.punctuationChars@ Text.whitespaceChars |>List.toArray
+      let splitChars = Text.punctuationChars@ Text.whitespaceChars @ ['(';')';'”';'\'';'•';'/';'"';'™'] |>List.toArray
       text.Split(splitChars, StringSplitOptions.RemoveEmptyEntries) |> List.ofArray
 
   let getLangCount dir : (AdAndLanguage list * WordCount list)=
@@ -112,6 +112,7 @@ module Annons=
     File.WriteAllText ("list-langs.txt", txt)
     let wordCounts = getWordCount dir
     let txt =wordCounts
+              |> List.filter ((<) 1 << snd)
               |> List.sortByDescending (fun (_,l)->l)
               |> List.map (fun (s,l)-> sprintf "%d : %s" l s )
               |> String.concat "\n" 
