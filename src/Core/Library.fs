@@ -26,13 +26,22 @@ module Utv=
             | Error err->
                 printfn "Couldn't download ad %s due to %O" a.id err
 
+    let rec retry times fn = 
+        if times > 1 then
+            try
+                fn()
+            with 
+            | _ -> retry (times - 1) fn
+        else
+            fn()
+
     let fetchListAndAds dir=
-      
-      fetchList 80 dir
-      fetchList 2419 dir
-      fetchList 7633 dir
-      fetchList 7632 dir
-      fetchList 7576 dir
+      let retryFetchList num dir= retry 3 (fun ()->fetchList num dir)
+      retryFetchList 80 dir
+      retryFetchList 2419 dir
+      retryFetchList 7633 dir
+      retryFetchList 7632 dir
+      retryFetchList 7576 dir
       let listFile = Directory.GetFiles(Path.Combine(dir, "list"),"*.json")
       let loadAndMap (f:string)=
         let file = Path.Combine(dir, f)
