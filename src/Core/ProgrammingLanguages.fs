@@ -8,7 +8,7 @@ module private Internal=
     // since go is a word commonly used, it's difficult to pick out
     let probNotRelevant = ["e";"it";"small";"go";"clean"; "name"
                            "s"; "k"; "q"; "p"; "red"; "rapid"; "d"
-                           "b"; "ml"; "spark"; "processing"; "basic"
+                           "b"; "ml"; "spark"; "processing"; "basic"; "sas"; "io"; "george"; "pure"; "tutor"; "crystal"; "fp"
                            "print"; "ring"; "links"; "scratch"; "factor"
                            "pilot"; "plus"; "actor"; "joy"; "fact"; "hack"]
 
@@ -26,6 +26,6 @@ let names =
          |> List.collect List.ofArray
          |> List.map (fun s->s.ToLower())
          |> List.filter (fun s-> not <| List.contains s probNotRelevant )
-         |> List.append ["golang"]
+         |> List.append ["golang"; "nodejs"]
          |> set
 
