@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Languages.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="*.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <PackageReference Include="FSharp.Data" Version="3.0.1" />
+  </ItemGroup>
+
+</Project>
