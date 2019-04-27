@@ -18,7 +18,7 @@ module Annons=
       return Ok res
     with
     | :? System.Net.WebException as ex->
-      return Error (int ex.Status, ex.Message)
+      return Error (string ex.Status, ex.Message)
   }
   type Complete=JsonProvider<"./sample_22898479.json">
 
