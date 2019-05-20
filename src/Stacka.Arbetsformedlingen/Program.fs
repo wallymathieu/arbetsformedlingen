@@ -12,6 +12,8 @@ open Fleece
 open Fleece.FSharpData
 open Fleece.FSharpData.Operators
 open FSharp.Data
+open Polly
+open FSharpPlus.Data
 
 module RawAd=
   /// map to Annons with text
@@ -67,8 +69,11 @@ module AdAndLanguage=
 
 
 type WordCount=string * int
-
-
+module Polly=
+  let execute (policy : #AsyncPolicy) f  =async {
+      let! res = policy.ExecuteAndCaptureAsync(fun () -> f() |> Async.StartAsTask) |> Async.AwaitTask
+      return res.Result
+  }
 module AdRepository=
 
   let tryFetchAdToAndPersist a (repository:IAdRepository)=async{
@@ -85,24 +90,17 @@ module AdRepository=
     else
       return Ok <| Choice2Of2 ()
   }
-  let rec retry times fn =async {
-    if times > 1 then
-      try
-        return! fn()
-      with
-      | _ ->
-        do! Async.Sleep 100
-        return! retry (times - 1) fn
-    else
-      return! fn()
-  }
-
+  let retryFourTimes =
+    Policy
+      .Handle<Exception>()
+      .WaitAndRetryAsync([TimeSpan.FromMilliseconds(100.0);TimeSpan.FromMilliseconds(500.0);TimeSpan.FromSeconds(3.0);TimeSpan.FromSeconds(7.0);])
+   
   let fetchListAndAds (repository:IAdRepository) dir = async{
     let fetchList (yrkesId) =
       let q={ Platsannonser.defaultQuery with YrkesId=Some yrkesId; Sida=Some 0; AntalRader=Some 2000 }
       Platsannonser.query q
 
-    let retryFetchList num = retry 4 (fun ()-> fetchList num)
+    let retryFetchList num = Polly.execute retryFourTimes (fun ()-> fetchList num)
     let! fetchLists = Async.Parallel(seq {
       yield retryFetchList 80
       yield retryFetchList 2419

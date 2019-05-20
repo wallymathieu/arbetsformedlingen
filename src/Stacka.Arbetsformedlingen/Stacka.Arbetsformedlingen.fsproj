@@ -17,5 +17,6 @@
   <ItemGroup>
     <PackageReference Include="FSharp.Data" Version="3.0.1" />
     <PackageReference Include="Fleece.FSharpData" Version="0.8.0-alpha-3" />
+    <PackageReference Include="Polly" Version="7.1.0" />
   </ItemGroup>
 </Project>
