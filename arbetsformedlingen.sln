@@ -7,15 +7,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7F1F380A-5CE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E6C16854-8EFA-4052-8A69-D70846BB11CB}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tests", "test\Tests\Tests.fsproj", "{72000979-EE65-4E42-A0F0-8976A13F5192}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Tests", "test\Tests\Tests.fsproj", "{72000979-EE65-4E42-A0F0-8976A13F5192}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Stacka.Arbetsformedlingen", "src\Stacka.Arbetsformedlingen\Stacka.Arbetsformedlingen.fsproj", "{64D2F515-E088-4A97-99DC-4265F54370CB}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Stacka.Arbetsformedlingen", "src\Stacka.Arbetsformedlingen\Stacka.Arbetsformedlingen.fsproj", "{64D2F515-E088-4A97-99DC-4265F54370CB}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Stacka.Languages", "src\Stacka.Languages\Stacka.Languages.fsproj", "{9989FD86-B790-4672-90D4-1EAA0AF761A4}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Stacka.Languages", "src\Stacka.Languages\Stacka.Languages.fsproj", "{9989FD86-B790-4672-90D4-1EAA0AF761A4}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Stacka", "src\Stacka\Stacka.fsproj", "{87F57113-C114-4AFB-A8B7-4B7D28C2C0C9}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Stacka", "src\Stacka\Stacka.fsproj", "{87F57113-C114-4AFB-A8B7-4B7D28C2C0C9}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Stacka.Languages.Tests", "test\Stacka.Languages.Tests\Stacka.Languages.Tests.fsproj", "{97DFF534-29D5-4EC2-BEF7-90FA28EABEA6}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Stacka.Languages.Tests", "test\Stacka.Languages.Tests\Stacka.Languages.Tests.fsproj", "{97DFF534-29D5-4EC2-BEF7-90FA28EABEA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66BED323-9C6C-44C6-BF00-0A45D1ACBEA1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,9 +30,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{72000979-EE65-4E42-A0F0-8976A13F5192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -91,11 +93,17 @@ Global
 		{97DFF534-29D5-4EC2-BEF7-90FA28EABEA6}.Release|x86.ActiveCfg = Release|Any CPU
 		{97DFF534-29D5-4EC2-BEF7-90FA28EABEA6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{72000979-EE65-4E42-A0F0-8976A13F5192} = {E6C16854-8EFA-4052-8A69-D70846BB11CB}
 		{64D2F515-E088-4A97-99DC-4265F54370CB} = {7F1F380A-5CEE-4AE2-8AA3-AF6CC4035115}
 		{9989FD86-B790-4672-90D4-1EAA0AF761A4} = {7F1F380A-5CEE-4AE2-8AA3-AF6CC4035115}
 		{87F57113-C114-4AFB-A8B7-4B7D28C2C0C9} = {7F1F380A-5CEE-4AE2-8AA3-AF6CC4035115}
 		{97DFF534-29D5-4EC2-BEF7-90FA28EABEA6} = {E6C16854-8EFA-4052-8A69-D70846BB11CB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EEEA48D-2E69-4A56-8BF7-DEFE246C9D77}
 	EndGlobalSection
 EndGlobal
