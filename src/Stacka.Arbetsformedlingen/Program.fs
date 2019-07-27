@@ -94,7 +94,7 @@ module AdRepository=
     Policy
       .Handle<Exception>()
       .WaitAndRetryAsync([TimeSpan.FromMilliseconds(100.0);TimeSpan.FromMilliseconds(500.0);TimeSpan.FromSeconds(3.0);TimeSpan.FromSeconds(7.0);])
-   
+
   let fetchListAndAds (repository:IAdRepository) dir = async{
     let fetchList (yrkesId) =
       let q={ Platsannonser.defaultQuery with YrkesId=Some yrkesId; Sida=Some 0; AntalRader=Some 2000 }
@@ -190,59 +190,65 @@ module Old=
               |> String.concat "\n"
     do! Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(dir, "list-words.txt"), txt))
   }
+type Cmd=
+  |Fetch=0
+  |Batch=1
+  |Sum=2
+  |WriteLangCount=3
 type CmdArgs =
-  { Command : string option; Dir: string }
+  { Command: Cmd option; Dir: string }
+open FSharpPlus
+open System.Linq
+let (|Cmd|_|) : _-> Cmd option = tryParse
 [<EntryPoint>]
 let main argv =
-  let defaultArgs = { Command = None; Dir= Directory.GetCurrentDirectory() }
+  let defaultArgs = { Command = None; Dir = Directory.GetCurrentDirectory() }
   let usage =
    ["Usage:"
     sprintf "    --dir     DIRECTORY  where to store data (Default: %s)" defaultArgs.Dir
-    "    --command COMMAND    one of [fetch-files, write-lang-count]"]
+    sprintf "    COMMAND    one of [%s]" (Enum.GetValues( typeof<Cmd> ).Cast<Cmd>() |> Seq.map string |> String.concat ", " )]
     |> String.concat System.Environment.NewLine
-
   let rec parseArgs b args =
     match args with
-    | [] -> b
-    | "--command" :: command :: xs -> parseArgs { b with Command = Some command } xs
+    | [] -> Ok b
     | "--dir" :: dir :: xs -> parseArgs { b with Dir = dir } xs
+    | Cmd cmd :: xs-> parseArgs { b with Command = Some cmd } xs
     | invalidArgs ->
-      printfn "error: invalid arguments %A" invalidArgs
-      printfn "%s" usage
-      exit 1
+      sprintf "error: invalid arguments %A" invalidArgs |> Error
 
-  let args = argv |> List.ofArray |> parseArgs defaultArgs
-  let runSynchronouslyAndPrintResult fn=
-    match Async.RunSynchronously fn  with
-      | Ok v->
-        Console.WriteLine (string v)
+  match argv |> List.ofArray |> parseArgs defaultArgs with
+  | Ok args->
+    let runSynchronouslyAndPrintResult fn=
+      match Async.RunSynchronously fn  with
+        | Ok v->
+          Console.WriteLine (string v)
+          0
+        | Error e ->
+          Console.Error.WriteLine (string e)
+          1
+
+    match args with
+    | { Dir=dir; Command=Some command } ->
+      match command with
+      | Cmd.Fetch ->
+        let r = Repositories.fileSystem dir
+        Async.RunSynchronously( AdRepository.fetchListAndAds r dir)
         0
-      | Error e ->
-        Console.Error.WriteLine (string e)
-        1
-
-  match args with
-  | { Command=Some command; Dir=dir } ->
-    match command with
-    | "fetch" ->
-      let r = Repositories.fileSystem dir
-      Async.RunSynchronously( AdRepository.fetchListAndAds r dir)
-      0
-    | "batch" ->
-      let r = Repositories.fileSystem dir
-      Async.RunSynchronously( AdRepository.batchCount r dir)
-      0
-    | "sum" ->
-      runSynchronouslyAndPrintResult (AdRepository.sum dir)
-    | "write-lang-count" ->
-      let r = Repositories.fileSystem dir
-      Async.RunSynchronously( Old.writeLangCount r dir)
-      0
+      | Cmd.Batch ->
+        let r = Repositories.fileSystem dir
+        Async.RunSynchronously( AdRepository.batchCount r dir)
+        0
+      | Cmd.Sum ->
+        runSynchronouslyAndPrintResult (AdRepository.sum dir)
+      | Cmd.WriteLangCount ->
+        let r = Repositories.fileSystem dir
+        Async.RunSynchronously( Old.writeLangCount r dir)
+        0
     | _ ->
       printfn "error: Expected command"
       printfn "%s" usage
       1
-  | _ ->
-    printfn "error: Expected command"
-    printfn "%s" usage
-    1
+  | Error err->
+      printfn "%s" err
+      printfn "%s" usage
+      1

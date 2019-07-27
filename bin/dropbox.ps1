@@ -6,7 +6,7 @@ Push-Location
 try {
     $arbetsformedlingen = [IO.Path]::Combine($PSScriptRoot, ".." , "src", "Stacka.Arbetsformedlingen")
     Set-Location $arbetsformedlingen
-    dotnet run --dir $dir --command $command 
+    dotnet run --dir $dir $command
 }
 finally {
     Pop-Location
