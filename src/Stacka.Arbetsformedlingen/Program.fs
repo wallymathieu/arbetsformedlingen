@@ -190,11 +190,12 @@ module Old=
               |> String.concat "\n"
     do! Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(dir, "list-words.txt"), txt))
   }
+[<Diagnostics.CodeAnalysis.SuppressMessage("*", "EnumCasesNames")>]
 type Cmd=
-  |Fetch=0
-  |Batch=1
-  |Sum=2
-  |WriteLangCount=3
+  |fetch=0
+  |batch=1
+  |sum=2
+  |writeLangCount=3
 type CmdArgs =
   { Command: Cmd option; Dir: string }
 open FSharpPlus
@@ -207,7 +208,7 @@ let main argv =
    ["Usage:"
     sprintf "    --dir     DIRECTORY  where to store data (Default: %s)" defaultArgs.Dir
     sprintf "    COMMAND    one of [%s]" (Enum.GetValues( typeof<Cmd> ).Cast<Cmd>() |> Seq.map string |> String.concat ", " )]
-    |> String.concat System.Environment.NewLine
+    |> String.concat Environment.NewLine
   let rec parseArgs b args =
     match args with
     | [] -> Ok b
@@ -230,17 +231,17 @@ let main argv =
     match args with
     | { Dir=dir; Command=Some command } ->
       match command with
-      | Cmd.Fetch ->
+      | Cmd.fetch ->
         let r = Repositories.fileSystem dir
         Async.RunSynchronously( AdRepository.fetchListAndAds r dir)
         0
-      | Cmd.Batch ->
+      | Cmd.batch ->
         let r = Repositories.fileSystem dir
         Async.RunSynchronously( AdRepository.batchCount r dir)
         0
-      | Cmd.Sum ->
+      | Cmd.sum ->
         runSynchronouslyAndPrintResult (AdRepository.sum dir)
-      | Cmd.WriteLangCount ->
+      | Cmd.writeLangCount ->
         let r = Repositories.fileSystem dir
         Async.RunSynchronously( Old.writeLangCount r dir)
         0
