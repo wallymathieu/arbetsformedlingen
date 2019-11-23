@@ -9,5 +9,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="3.3.31.15" />
+    <PackageReference Update="FSharp.Core" Version="4.5.4" />
   </ItemGroup>
 </Project>
