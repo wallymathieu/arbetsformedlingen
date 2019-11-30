@@ -330,3 +330,5 @@ ASALocalRun/
 .mfractor/
 
 .ionide
+# for testing purposes : .env
+# real deployments will have other env
