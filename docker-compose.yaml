@@ -6,14 +6,21 @@ version: '3'
 # minio/minio server /data
 
 services:
- minio:
-  image: minio/minio
-  volumes:
-   - ./tmp/minio:/data
-  ports:
-   - "9000:9000"
-  environment:
-   MINIO_ACCESS_KEY: testkey
-   MINIO_SECRET_KEY: secretkey
-  command: server /data
+  minio:
+    image: minio/minio
+    volumes:
+      - ./tmp/minio:/data
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ACCESS_KEY: testkey
+      MINIO_SECRET_KEY: secretkey
+    command: server /data
 
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+        SA_PASSWORD: ${STACKA_DB_PASSWORD}
+        ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
