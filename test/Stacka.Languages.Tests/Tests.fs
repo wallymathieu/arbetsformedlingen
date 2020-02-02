@@ -8,7 +8,7 @@ open Stacka.Languages.ProgrammingLanguages
 [<InlineData("c++")>]
 [<InlineData("java")>]
 [<InlineData("c#")>]
-[<InlineData("go")>]
+[<InlineData("golang")>]
 [<InlineData("oberon")>]
 [<InlineData("perl")>]
 [<InlineData("hack")>]
@@ -57,6 +57,7 @@ let ``Should be able to translate c++ language variants`` (languageAndVariant, l
 [<InlineData("csharp", "c#")>]
 [<InlineData("f #", "f#")>]
 [<InlineData("fsharp", "f#")>]
+[<InlineData("språket Go", "golang")>]
 let ``Should be able to translate sharp language variants`` (languageAndVariant, language:string) =
   Assert.Equal(language, translateVariants languageAndVariant)
 
