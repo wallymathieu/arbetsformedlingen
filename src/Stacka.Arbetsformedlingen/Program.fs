@@ -170,7 +170,7 @@ module AdRepository=
 
 module Old=
 
-  [<Obsolete("!")>]
+  //[<Obsolete("!")>]
   let writeLangCount repository dir=async{
     let! adAndLanguages = AdRepository.getLangCount repository
     let langTags = adAndLanguages
@@ -245,6 +245,10 @@ let main argv =
         let r = Repositories.fileSystem dir
         Async.RunSynchronously( Old.writeLangCount r dir)
         0
+      | _ ->
+        printfn "error: Expected valid command"
+        printfn "%s" usage
+        1
     | _ ->
       printfn "error: Expected command"
       printfn "%s" usage
