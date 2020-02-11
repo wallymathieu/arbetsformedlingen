@@ -55,10 +55,11 @@ let wikipediaSet=
 
   baseLangs
   |> Set.union lang1
-  |> Set.union (Set.ofList ["golang"])
+  |> Set.union (Set.ofList ["golang"; "vb#";])
   |> Set.remove "go"
   |> Set.remove "it"
   |> Set.remove "a"
+
   //|> List.filter (fun s-> not <| List.contains s probNotRelevant )
   //|> List.append ["golang"; "nodejs"]
 
@@ -73,6 +74,7 @@ let languageAlias=[
   ["c #"; "C #"; "csharp"], " c# "
   ["f #"; "F #"; "fsharp"], " f# "
   ["språket Go"; "Go lang"; "Go and ";" in Go "; ", Go,"; ", Go."; " on Go "; " i Go ";", Go or";" som Go,";"• Go"], " golang "
+  ["Visual Basic"; "vb.net"; "VB.net"], " vb# "
 ]
 
 let translateVariants (text:string)=
