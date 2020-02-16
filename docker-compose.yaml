@@ -1,4 +1,4 @@
-version: '3'
+version: '3.1'
 #docker run -p 9000:9000
 #--name minio1
 # -v /mnt/data:/data
@@ -6,14 +6,24 @@ version: '3'
 # minio/minio server /data
 
 services:
- minio:
-  image: minio/minio
-  volumes:
-   - ./tmp/minio:/data
-  ports:
-   - "9000:9000"
-  environment:
-   MINIO_ACCESS_KEY: testkey
-   MINIO_SECRET_KEY: secretkey
-  command: server /data
+  minio:
+    image: minio/minio
+    volumes:
+      - ./tmp/minio:/data
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ACCESS_KEY: testkey
+      MINIO_SECRET_KEY: secretkey
+    command: server /data
 
+
+  pg:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: STACKA_TEST_PASSWORD
+      POSTGRES_USER: stacka
+      POSTGRES_DB: stacka
+    ports:
+      - "5432:5432"

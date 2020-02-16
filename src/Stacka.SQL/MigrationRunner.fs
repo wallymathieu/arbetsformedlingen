@@ -1,6 +1,5 @@
 module Stacka.SQL.MigrationRunner
 open System
-open Stacka.SQL.Extensions
 open FluentMigrator.Runner
 open FluentMigrator.Runner.Processors
 open Microsoft.Extensions.DependencyInjection

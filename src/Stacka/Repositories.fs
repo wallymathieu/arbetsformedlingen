@@ -4,16 +4,13 @@ open System.IO
 open System.Threading.Tasks
 open System.Net
 
-open Amazon.S3
-open Amazon.S3.Model
-
 type IAdRepository=interface
   abstract member Get: string -> Async<RawAd option>
   abstract member List: unit -> Async<RawAd list>
   abstract member Contains: string -> Async<bool>
   abstract member Store: string*RawAd -> Async<unit>
 end
-
+/// Repository in filesystem
 let fileSystem dir=
   let filename id = Path.Combine(dir, "data", sprintf "%s.json" id)
   let readAllTextAsync (file:string) = async{
@@ -43,6 +40,9 @@ let fileSystem dir=
     member __.Contains id = async{ return File.Exists (filename id) }
     member __.Store(id, RawAd ad) = writeAllTextAsync (filename id, ad)
   }
+/// Repository on top of S3 bucket
+open Amazon.S3
+open Amazon.S3.Model
 let s3 bucketName maxKeys (s3Factory:(unit -> AmazonS3Client))=
   let keyname id = sprintf "ad_%s.json" id
   { new IAdRepository with
@@ -130,5 +130,77 @@ let s3 bucketName maxKeys (s3Factory:(unit -> AmazonS3Client))=
       req.InputStream <- ms
       let! _1 = Async.AwaitTask(s3.PutObjectAsync(req))
       return _1 |> ignore
+    }
+  }
+
+/// Repository on top of SQL
+open System.Data
+open System.Data.Common
+
+let sql (sqlConnFactory:(unit -> #DbConnection))=
+  let addParameter (cmd: #IDbCommand) (name,value: #obj,dbType:DbType) =
+    let p=cmd.CreateParameter()
+    p.Value <- value
+    p.DbType <- dbType
+    p.ParameterName <- name
+    cmd.Parameters.Add p |> ignore
+  let execCmdReader func (cmd: #DbCommand) =async{
+    let! reader =Async.AwaitTask(cmd.ExecuteReaderAsync())
+    try
+      return! func reader
+    finally reader.Dispose()
+  }
+  let readOnce func (reader: #DbDataReader) =async{
+    let! any = Async.AwaitTask(reader.ReadAsync())
+    if any then
+      return Some <| func reader
+    else
+      return None
+  }
+  let readAll func (reader: #DbDataReader) =async{
+    let mutable any=true
+    let array = ResizeArray()
+    while any do
+      let! read= Async.AwaitTask(reader.ReadAsync())
+      any<-read
+      if any then
+        func reader |> array.Add
+    return List.ofSeq array
+  }
+  let execCmd (cmd: #DbCommand) =async{
+    let! _1= Async.AwaitTask(cmd.ExecuteNonQueryAsync())
+    _1 |> ignore
+  }
+  { new IAdRepository with
+    member __.Get id = async{
+      use conn = sqlConnFactory()
+      use cmd = conn.CreateCommand()
+      cmd.CommandText <- "SELECT source FROM arbetsformedlingen.ads WHERE id = @Id"
+      addParameter cmd ("@Id", id, DbType.AnsiString)
+      let read (reader:DbDataReader)= RawAd <| reader.GetString(0)
+      return! execCmdReader (readOnce read) cmd
+    }
+    member __.List() =async{
+      use conn = sqlConnFactory()
+      use cmd = conn.CreateCommand()
+      cmd.CommandText <- "SELECT source FROM arbetsformedlingen.ads"
+      let read (reader:DbDataReader)= RawAd <| reader.GetString(0)
+      return! execCmdReader (readAll read) cmd
+    }
+    member __.Contains id = async{
+      use conn = sqlConnFactory()
+      use cmd = conn.CreateCommand()
+      cmd.CommandText <- "SELECT 1 FROM arbetsformedlingen.ads WHERE id = @Id"
+      addParameter cmd ("@Id", id, DbType.AnsiString)
+      let! v= execCmdReader (readOnce ignore) cmd
+      return Option.isSome v
+    }
+    member __.Store(id, RawAd ad)= async{
+      use conn = sqlConnFactory()
+      use cmd = conn.CreateCommand()
+      cmd.CommandText <- "INSERT INTO arbetsformedlingen.ads (id, source) VALUES (@Id, @Source)"
+      addParameter cmd ("@Id", id, DbType.AnsiString)
+      addParameter cmd ("@Source", ad, DbType.String)
+      return! execCmd cmd
     }
   }

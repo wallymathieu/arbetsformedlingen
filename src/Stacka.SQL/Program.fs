@@ -5,14 +5,16 @@ type CmdArgs =
   { connection : string
     processor : string
     operation : string
+    version : int64
   }
 
 [<EntryPoint>]
 let main argv =
     let defaultArgs =
-      { connection= "Server=localhost;Database=stacka;MultipleActiveResultSets=true;User Id=sa;Password=EF_TEST_PASSWORD"
-        processor = "SqlServer2016"
+      { connection= "Server=localhost;Database=stacka;User id=stacka;Password=STACKA_TEST_PASSWORD;Port=5432;CommandTimeout=200;"
+        processor = "PostgreSQL"
         operation = "migrate"
+        version = 0L
       }
     let printHelp () =
       printfn "Usage:"
@@ -40,9 +42,9 @@ let main argv =
     | "migrate" ->
       runner.MigrateUp()
       0
+    | "down" ->
+      runner.MigrateDown(args.version)
+      0
     | _ ->
-(* NOTE: To create db, run
-CREATE DATABASE [ef-core-studies-fsharp]
-*)
       printHelp()
       1 // return an integer exit code
