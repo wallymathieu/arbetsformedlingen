@@ -3,6 +3,7 @@ open System
 open System.IO
 open System.Threading.Tasks
 open System.Net
+open FSharpPlus
 
 type IAdRepository=interface
   abstract member Get: string -> Async<RawAd option>
@@ -45,14 +46,16 @@ open Amazon.S3
 open Amazon.S3.Model
 let s3 bucketName maxKeys (s3Factory:(unit -> AmazonS3Client))=
   let keyname id = sprintf "ad_%s.json" id
+  let getObjectReq id=
+    let req = GetObjectRequest()
+    req.BucketName <- bucketName
+    req.Key <- keyname id
+    req
   { new IAdRepository with
     member __.Get id = async{
       use s3 = s3Factory()
-      let req = GetObjectRequest()
-      req.BucketName <- bucketName
-      req.Key <- keyname id
+      let req = getObjectReq id
       let! object =Async.AwaitTask(s3.GetObjectAsync(req))
-
       if object.HttpStatusCode = HttpStatusCode.OK then
         use r = new StreamReader( object.ResponseStream)
         let content =r.ReadToEnd()
@@ -167,10 +170,9 @@ let sql (sqlConnFactory:(unit -> #DbConnection))=
         func reader |> array.Add
     return List.ofSeq array
   }
-  let execCmd (cmd: #DbCommand) =async{
-    let! _1= Async.AwaitTask(cmd.ExecuteNonQueryAsync())
-    _1 |> ignore
-  }
+  let execCmd (cmd: #DbCommand) =
+    Async.map ignore <| Async.AwaitTask(cmd.ExecuteNonQueryAsync())
+
   { new IAdRepository with
     member __.Get id = async{
       use conn = sqlConnFactory()
