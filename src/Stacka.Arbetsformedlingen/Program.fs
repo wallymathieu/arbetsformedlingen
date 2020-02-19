@@ -206,7 +206,7 @@ type Cmd=
   |writeLangCount=3
   |syncsql=4
 type CmdArgs =
-  { Command: Cmd option; Dir: string; PGConn: string option }
+  { Command: Cmd option; Dir: string option; PGConn: string option }
 open FSharpPlus
 open System.Linq
 open Npgsql
@@ -214,17 +214,18 @@ open Npgsql
 let (|Cmd|_|) : _-> Cmd option = tryParse
 [<EntryPoint>]
 let main argv =
-  let defaultArgs = { Command = None; Dir = Directory.GetCurrentDirectory(); PGConn = None }
+  let defaultDir = Directory.GetCurrentDirectory()
+  let defaultArgs = { Command = None; Dir = None; PGConn = None }
   let usage =
    ["Usage:"
-    sprintf "    --dir     DIRECTORY  where to store data (Default: %s)" defaultArgs.Dir
+    sprintf "    --dir     DIRECTORY  where to store data (Default: %s)" defaultDir
     sprintf "    --pgconn  connection string to database"
     sprintf "    COMMAND    one of [%s]" (Enum.GetValues( typeof<Cmd> ).Cast<Cmd>() |> Seq.map string |> String.concat ", " )]
     |> String.concat Environment.NewLine
   let rec parseArgs b args =
     match args with
     | [] -> Ok b
-    | "--dir" :: dir :: xs -> parseArgs { b with Dir = dir } xs
+    | "--dir" :: dir :: xs -> parseArgs { b with Dir = Some dir } xs
     | "--pgconn" :: conn :: xs -> parseArgs { b with PGConn = Some conn } xs
     | Cmd cmd :: xs-> parseArgs { b with Command = Some cmd } xs
     | invalidArgs ->
@@ -240,20 +241,24 @@ let main argv =
         | Error e ->
           Console.Error.WriteLine (string e)
           1
-    let fsRepository = Repositories.fileSystem args.Dir
     let createPgRepository conn =
       let getConnection ()=
         let conn = new NpgsqlConnection(conn)
         conn.Open()
         conn
       Repositories.sql getConnection
+
     let repositories =
-      match args.PGConn with
-      | Some conn->
-        Repositories.leftCombine fsRepository <| createPgRepository conn
-      | None -> fsRepository
+      let repos = [
+        Option.map createPgRepository args.PGConn
+        Option.map Repositories.fileSystem args.Dir
+      ]
+      let list = List.choose id repos
+      if List.isEmpty list then Repositories.fileSystem defaultDir
+      else List.reduce Repositories.leftCombine list
     match args with
-    | { Dir=dir; Command=Some command; PGConn=conn } ->
+    | { Command=Some command; PGConn=conn } ->
+      let dir = Option.defaultValue defaultDir args.Dir
       match command with
       | Cmd.fetch ->
         Async.RunSynchronously( AdRepository.fetchListAndAds repositories dir)
@@ -269,7 +274,9 @@ let main argv =
       | Cmd.syncsql ->
         match conn with
         | Some conn->
-          Async.RunSynchronously( AdRepository.syncRepositories fsRepository <| createPgRepository conn)
+          let fsRepository = Repositories.fileSystem dir
+          let sqlRepository = createPgRepository conn
+          Async.RunSynchronously( AdRepository.syncRepositories fsRepository sqlRepository)
           0
         | _ ->
           printfn "error: Expected a connection string"
