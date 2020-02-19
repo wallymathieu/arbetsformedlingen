@@ -8,9 +8,22 @@ open FSharpPlus
 type IAdRepository=interface
   abstract member Get: string -> Async<RawAd option>
   abstract member List: unit -> Async<RawAd list>
+  abstract member Ids: unit -> Async<string list>
   abstract member Contains: string -> Async<bool>
   abstract member Store: string*RawAd -> Async<unit>
 end
+/// combine two repositories but use the left side for reads, store in both
+let leftCombine (a:IAdRepository) (b:IAdRepository) =
+  { new IAdRepository with
+    member __.Get id = a.Get id
+    member __.List () = a.List ()
+    member __.Ids () = a.Ids ()
+    member __.Contains id = a.Contains id
+    member __.Store (id,ad) = async{
+      do! a.Store (id,ad)
+      do! b.Store (id,ad)
+    }
+  }
 /// Repository in filesystem
 let fileSystem dir=
   let filename id = Path.Combine(dir, "data", sprintf "%s.json" id)
@@ -38,6 +51,11 @@ let fileSystem dir=
         RawAd content |> files.Add
       return (files |>  Seq.toList)
     }
+    member __.Ids() = async{
+      let getFileContent (file:string) = readAllTextAsync file
+      let ids =seq { for file in Directory.GetFiles(Path.Combine(dir, "data"), "*.json") do yield Path.GetFileNameWithoutExtension file }
+      return (ids |> Seq.toList)
+    }
     member __.Contains id = async{ return File.Exists (filename id) }
     member __.Store(id, RawAd ad) = writeAllTextAsync (filename id, ad)
   }
@@ -51,6 +69,49 @@ let s3 bucketName maxKeys (s3Factory:(unit -> AmazonS3Client))=
     req.BucketName <- bucketName
     req.Key <- keyname id
     req
+  let getObjects map=
+    let readObjects (req:ListObjectsRequest)=async{
+      use s3 = s3Factory()
+      let! objects =Async.AwaitTask(s3.ListObjectsAsync(req))
+      let! items=
+        objects.S3Objects
+              |> Seq.map (fun o->
+                let req = GetObjectRequest()
+                req.BucketName <- o.BucketName
+                req.Key <- o.Key;
+                s3.GetObjectAsync(req))
+              |> Task.WhenAll
+              |> Async.AwaitTask
+      let ads = items|> Array.choose map
+      if objects.IsTruncated then
+        let nextReq = ListObjectsRequest()
+        nextReq.BucketName <- req.BucketName
+        nextReq.MaxKeys <- req.MaxKeys
+        nextReq.Marker <- objects.NextMarker
+        nextReq.Prefix <- req.Prefix
+        return (ads, Some nextReq)
+      else
+        return (ads, None)
+    }
+    async {
+      let req = ListObjectsRequest()
+      req.Prefix <- "ad_"
+      req.BucketName <- bucketName
+      req.MaxKeys <- maxKeys
+
+      let! (commands,maybeNext') = readObjects req
+      let allCommands= ResizeArray<_>()
+      allCommands.Add commands
+      let mutable maybeNext = maybeNext'
+      while (maybeNext.IsSome) do
+        match maybeNext with
+        | Some next ->
+          let! (commands,maybeNext') = readObjects next
+          allCommands.Add commands
+          maybeNext <- maybeNext'
+        | None -> ()
+      return allCommands.ToArray() |> Array.concat |> Array.toList
+    }
   { new IAdRepository with
     member __.Get id = async{
       use s3 = s3Factory()
@@ -68,51 +129,8 @@ let s3 bucketName maxKeys (s3Factory:(unit -> AmazonS3Client))=
           use r = new StreamReader(s)
           let content = r.ReadToEnd()
           if String.IsNullOrEmpty content then None else Some <| RawAd content
-
-      let readBatches () =
-        let readObjects (req:ListObjectsRequest)=async{
-          use s3 = s3Factory()
-          let! objects =Async.AwaitTask(s3.ListObjectsAsync(req))
-          let! items=
-            objects.S3Objects
-                  |> Seq.map (fun o->
-                    let req = GetObjectRequest()
-                    req.BucketName <- o.BucketName
-                    req.Key <- o.Key;
-                    s3.GetObjectAsync(req))
-                  |> Task.WhenAll
-                  |> Async.AwaitTask
-          let ads = items|> Array.choose (fun i->readFromStream i.ResponseStream)
-          if objects.IsTruncated then
-            let nextReq = ListObjectsRequest()
-            nextReq.BucketName <- req.BucketName
-            nextReq.MaxKeys <- req.MaxKeys
-            nextReq.Marker <- objects.NextMarker
-            nextReq.Prefix <- req.Prefix
-            return (ads, Some nextReq)
-          else
-            return (ads, None)
-        }
-        async {
-          let req = ListObjectsRequest()
-          req.Prefix <- "ad_"
-          req.BucketName <- bucketName
-          req.MaxKeys <- maxKeys
-
-          let! (commands,maybeNext') = readObjects req
-          let allCommands= ResizeArray<_>()
-          allCommands.Add commands
-          let mutable maybeNext = maybeNext'
-          while (maybeNext.IsSome) do
-            match maybeNext with
-            | Some next ->
-              let! (commands,maybeNext') = readObjects next
-              allCommands.Add commands
-              maybeNext <- maybeNext'
-            | None -> ()
-          return allCommands.ToArray() |> Array.concat |> Array.toList
-        }
-      readBatches()
+      getObjects (fun i->readFromStream i.ResponseStream)
+    member __.Ids() = getObjects (fun i-> Some i.Key)
     member __.Contains id = async{
       use s3 = s3Factory()
       let req = GetObjectRequest()
@@ -187,6 +205,13 @@ let sql (sqlConnFactory:(unit -> #DbConnection))=
       use cmd = conn.CreateCommand()
       cmd.CommandText <- "SELECT source FROM arbetsformedlingen.ads"
       let read (reader:DbDataReader)= RawAd <| reader.GetString(0)
+      return! execCmdReader (readAll read) cmd
+    }
+    member __.Ids() = async{
+      use conn = sqlConnFactory()
+      use cmd = conn.CreateCommand()
+      cmd.CommandText <- "SELECT Id FROM arbetsformedlingen.ads"
+      let read (reader:DbDataReader)= reader.GetString(0)
       return! execCmdReader (readAll read) cmd
     }
     member __.Contains id = async{

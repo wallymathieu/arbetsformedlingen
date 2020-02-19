@@ -167,7 +167,15 @@ module AdRepository=
       return Ok (toJson l |> string)
     | Error err-> return Error err
   }
-
+  let syncRepositories (ra:IAdRepository) (rb:IAdRepository)=async{
+    let! ids = ra.Ids()
+    for id in ids do
+      let! contains = rb.Contains id
+      if not contains then
+        match! ra.Get id with
+        | Some ad -> do! rb.Store (id,ad)
+        | _ -> ()
+  }
 module Old=
 
   //[<Obsolete("!")>]
@@ -196,23 +204,28 @@ type Cmd=
   |batch=1
   |sum=2
   |writeLangCount=3
+  |syncsql=4
 type CmdArgs =
-  { Command: Cmd option; Dir: string }
+  { Command: Cmd option; Dir: string; PGConn: string option }
 open FSharpPlus
 open System.Linq
+open Npgsql
+
 let (|Cmd|_|) : _-> Cmd option = tryParse
 [<EntryPoint>]
 let main argv =
-  let defaultArgs = { Command = None; Dir = Directory.GetCurrentDirectory() }
+  let defaultArgs = { Command = None; Dir = Directory.GetCurrentDirectory(); PGConn = None }
   let usage =
    ["Usage:"
     sprintf "    --dir     DIRECTORY  where to store data (Default: %s)" defaultArgs.Dir
+    sprintf "    --pgconn  connection string to database"
     sprintf "    COMMAND    one of [%s]" (Enum.GetValues( typeof<Cmd> ).Cast<Cmd>() |> Seq.map string |> String.concat ", " )]
     |> String.concat Environment.NewLine
   let rec parseArgs b args =
     match args with
     | [] -> Ok b
     | "--dir" :: dir :: xs -> parseArgs { b with Dir = dir } xs
+    | "--pgconn" :: conn :: xs -> parseArgs { b with PGConn = Some conn } xs
     | Cmd cmd :: xs-> parseArgs { b with Command = Some cmd } xs
     | invalidArgs ->
       sprintf "error: invalid arguments %A" invalidArgs |> Error
@@ -227,24 +240,41 @@ let main argv =
         | Error e ->
           Console.Error.WriteLine (string e)
           1
-
+    let fsRepository = Repositories.fileSystem args.Dir
+    let createPgRepository conn =
+      let getConnection ()=
+        let conn = new NpgsqlConnection(conn)
+        conn.Open()
+        conn
+      Repositories.sql getConnection
+    let repositories =
+      match args.PGConn with
+      | Some conn->
+        Repositories.leftCombine fsRepository <| createPgRepository conn
+      | None -> fsRepository
     match args with
-    | { Dir=dir; Command=Some command } ->
+    | { Dir=dir; Command=Some command; PGConn=conn } ->
       match command with
       | Cmd.fetch ->
-        let r = Repositories.fileSystem dir
-        Async.RunSynchronously( AdRepository.fetchListAndAds r dir)
+        Async.RunSynchronously( AdRepository.fetchListAndAds repositories dir)
         0
       | Cmd.batch ->
-        let r = Repositories.fileSystem dir
-        Async.RunSynchronously( AdRepository.batchCount r dir)
+        Async.RunSynchronously( AdRepository.batchCount repositories dir)
         0
       | Cmd.sum ->
         runSynchronouslyAndPrintResult (AdRepository.sum dir)
       | Cmd.writeLangCount ->
-        let r = Repositories.fileSystem dir
-        Async.RunSynchronously( Old.writeLangCount r dir)
+        Async.RunSynchronously( Old.writeLangCount repositories dir)
         0
+      | Cmd.syncsql ->
+        match conn with
+        | Some conn->
+          Async.RunSynchronously( AdRepository.syncRepositories fsRepository <| createPgRepository conn)
+          0
+        | _ ->
+          printfn "error: Expected a connection string"
+          printfn "%s" usage
+          1
       | _ ->
         printfn "error: Expected valid command"
         printfn "%s" usage
