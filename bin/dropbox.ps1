@@ -4,7 +4,7 @@ param (
 )
 Push-Location
 try {
-    $arbetsformedlingen = [IO.Path]::Combine($PSScriptRoot, ".." , "src", "Stacka.Arbetsformedlingen")
+    $arbetsformedlingen = [IO.Path]::Combine($PSScriptRoot, ".." , "src", "Stacka.Jobtech")
     Set-Location $arbetsformedlingen
     dotnet run --dir $dir $command
 }

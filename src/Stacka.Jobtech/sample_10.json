@@ -1,0 +1,1210 @@
+[
+  {
+    "id": "23905080",
+    "external_id": null,
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23905080",
+    "logo_url": "https://www.arbetsformedlingen.se/rest/arbetsgivare/rest/af/v3/arbetsplatser/87425671/logotyper/logo.png",
+    "headline": "Erfaren trädgårdsarbetare",
+    "application_deadline": "2020-03-28T23:59:59",
+    "number_of_vacancies": 3,
+    "description": {
+      "text": "Vi söker nu flera erfarna trädgårdsarbetare till vår filial i Härnösand inför sommarsäsongen 2020. Jobbet som trädgårdsarbetare består av grönyteskötsel av park och fastighetsmark, med arbetsuppgifter som exempelvis träd- & buskbeskärning, ogräsbekämpning, gräsklippning, renhållning och plantering.\nVem är du?\nVi söker dig som har arbetat med skötsel av utemiljöer tidigare och har kompetens inom trädgård. Som person är du ansvarsfull och tycker det är roligt att arbeta med målet att uppnå ett bra resultat. Du trivs med att arbeta både självständigt och i team. Utbildning inom trädgård är meriterande, men vi fäster också stor vikt vid dina personliga egenskaper och din erfarenhet av arbetet. Du kommunicerar väl på svenska och har B-körkort.\nVi erbjuder ett varierande säsongsjobb med härliga kollegor. På plats finns två lagbasar som blir dina huvudsakliga arbetsledare.\nLåter detta som något för dig? Vill du arbeta i en spännande miljö på ett företag som bokstavligen växer så det knakar? Tveka då inte, utan skicka in din ansökan redan idag då vi rekryterar löpande. Kom ihåg att märka din ansökan med Trädgårdsarbetare Härnösand!\nLite mer om företaget i stort:\nHöga Kusten Skog & Fastighet AB är ett entreprenadföretag inom fastighetsskötsel och skogsvård som vuxit kraftigt sedan starten 2013 och har nu uppåt 80 anställda under högsäsong och genomsnittligt ca 35 helårsanställda. Omsättningen har ökat från 3,2 mkr första året till en bit över 43 mkr för förra verksamhetsåret. Företaget finns i dagsläget etablerat på 6 orter från Sollentuna i Söder till huvudkontoret Örnsköldsvik i norr.",
+      "text_formatted": "<p>Vi söker nu flera <strong>erfarna trädgårdsarbetare</strong> till vår filial i Härnösand inför sommarsäsongen 2020. Jobbet som trädgårdsarbetare består av grönyteskötsel av park och fastighetsmark, med arbetsuppgifter som exempelvis träd- &amp; buskbeskärning, ogräsbekämpning, gräsklippning, renhållning och plantering.</p><p><strong>Vem är du?</strong></p><p>Vi söker dig som har arbetat med skötsel av utemiljöer tidigare och har kompetens inom trädgård. Som person är du ansvarsfull och tycker det är roligt att arbeta med målet att uppnå ett bra resultat. Du trivs med att arbeta både självständigt och i team. Utbildning inom trädgård är meriterande, men vi fäster också stor vikt vid dina personliga egenskaper och din erfarenhet av arbetet. Du kommunicerar väl på svenska och har B-körkort.</p><p>Vi erbjuder ett varierande säsongsjobb med härliga kollegor. På plats finns två lagbasar som blir dina huvudsakliga arbetsledare.</p><p>Låter detta som något för dig? Vill du arbeta i en spännande miljö på ett företag som bokstavligen växer så det knakar? Tveka då inte, utan skicka in din ansökan redan idag då vi rekryterar löpande. <strong>Kom ihåg att märka din ansökan med Trädgårdsarbetare Härnösand!</strong></p><p><strong>Lite mer om företaget i stort:</strong></p><p>Höga Kusten Skog &amp; Fastighet AB är ett entreprenadföretag inom fastighetsskötsel och skogsvård som vuxit kraftigt sedan starten 2013 och har nu uppåt 80 anställda under högsäsong och genomsnittligt ca 35 helårsanställda. Omsättningen har ökat från 3,2 mkr första året till en bit över 43 mkr för förra verksamhetsåret. Företaget finns i dagsläget etablerat på 6 orter från Sollentuna i Söder till huvudkontoret Örnsköldsvik i norr.</p>",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": null
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": null,
+    "duration": {
+      "concept_id": "qQUd_4qe_NDT",
+      "label": "6 månader eller längre",
+      "legacy_ams_taxonomy_id": "2"
+    },
+    "working_hours_type": {
+      "concept_id": "6YE1_gAC_R2G",
+      "label": "Heltid",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "scope_of_work": {
+      "min": 100,
+      "max": 100
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": "www.hksf.se",
+      "organization_number": "5569255788",
+      "name": "Höga Kusten Skog & Fastighet AB",
+      "workplace": "Höga Kusten Skog & Fastighet AB Härnösand"
+    },
+    "application_details": {
+      "information": null,
+      "reference": "Trädgård Härnösand",
+      "email": "Daniel.kjellsson@hksf.se",
+      "via_af": false,
+      "url": null,
+      "other": "Mikael.nyberg@hksf.se"
+    },
+    "experience_required": true,
+    "access_to_own_car": false,
+    "driving_license_required": true,
+    "driving_license": [
+      {
+        "concept_id": "VTK8_WRx_GcM",
+        "label": "B"
+      }
+    ],
+    "occupation": {
+      "concept_id": "geNh_Yah_F3J",
+      "label": "Trädgårdsarbetare/Plantskolearbetare, trädgård",
+      "legacy_ams_taxonomy_id": "6274"
+    },
+    "occupation_group": {
+      "concept_id": "2xQ4_4kh_kTZ",
+      "label": "Trädgårdsodlare",
+      "legacy_ams_taxonomy_id": "6112"
+    },
+    "occupation_field": {
+      "concept_id": "VuuL_7CH_adj",
+      "label": "Naturbruk",
+      "legacy_ams_taxonomy_id": "13"
+    },
+    "workplace_address": {
+      "municipality": "Härnösand",
+      "municipality_code": "2280",
+      "municipality_concept_id": "uYRx_AdM_r4A",
+      "region": "Västernorrlands län",
+      "region_code": "22",
+      "region_concept_id": "NvUF_SP1_1zo",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": "Industrigatan",
+      "postcode": "87154",
+      "city": "Härnösand",
+      "coordinates": [
+        17.9060505951044,
+        62.6540145675248
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [
+        {
+          "weight": 10,
+          "concept_id": "zSLA_vw2_FXN",
+          "label": "Svenska",
+          "legacy_ams_taxonomy_id": "502"
+        }
+      ],
+      "work_experiences": [
+        {
+          "weight": 10,
+          "concept_id": "geNh_Yah_F3J",
+          "label": "Trädgårdsarbetare/Plantskolearbetare, trädgård",
+          "legacy_ams_taxonomy_id": "6274"
+        }
+      ]
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "publication_date": "2020-02-27T13:14:45",
+    "last_publication_date": "2020-03-28T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_ANNONSERA",
+    "timestamp": 1582815595734
+  },
+  {
+    "id": "23841251",
+    "external_id": "46-212000-0068-6340772375165702057",
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23841251",
+    "logo_url": "https://www.arbetsformedlingen.se/rest/arbetsgivare/rest/af/v3/organisation/2120000068/logotyper/logo.png",
+    "headline": "Sommarvikarier till Serviceboenden enligt LSS i Huddinge kommun",
+    "application_deadline": "2020-03-12T23:59:59",
+    "number_of_vacancies": 1,
+    "description": {
+      "text": "Huddinge är en växande Stockholmskommun med närhet till både stad och natur. Som medarbetare hos oss är du en viktig samhällsbyggare. Tillsammans skapar vi ett hållbart samhälle för alla som bor, besöker och arbetar i Huddinge.\r\n\r\nOm arbetsplatsen\nVikariepoolen ansvarar för funktionshinderområdets och hemtjänstens vikariehantering. Det innebär att vi bemannar funktionshinderområdets och hemtjänstens verksamheter vid korttidsfrånvaro, till exempel vid semester, sjukdom eller utbildning. De verksamheter vi bemannar är personlig assistans, gruppbostäder, servicebostäder, korttidshem, boendestöd, daglig verksamhet och eftermiddagstillsyn för barn över 12 år.\n\r\n\r\n-\r\n\r\nArbetsuppgifter\nVi söker just nu ett flertal stödassistenter/boendestödjare till våra serviceboenden. Som timvikarie på vikariepoolen kan du komma att arbeta på en eller flera olika boenden i Huddinge kommun. På de serviceboenden dessa tjänster gäller bor personer med asperger/ASD och andra neuropsykiatriska funktionsnedsättningar. På vissa enheter kan det förekomma utmanande beteende. \nArbetet som boendestödjare/stödassistent innebär att erbjuda våra brukare ett individuellt anpassat stöd i sin dagliga livsföring, Det innebär stödja brukarna i omvårdnad, aktiviteter och alla i hem förekommande sysslor. Brukarnas individuella stöd styrs utifrån brukarens individuella genomförandeplan. Både arbete dag-, kväll-, och nattetid förekommer.\nFör att vara aktuell för tjänsten krävs att du kan arbeta minst 6 veckor heltid i sommar mellan vecka 25-35. Vi ser helst att du även kan arbeta extra under tiden från och med nu och fram till semesterperioden, men ett minimikrav är att du kan gå ca 5 intropass innan semestervikariatet börjar. Det finns också goda möjligheter att fortsätta arbeta i höst som timvikarie. \n\r\n\r\nVi söker dig som har erfarenhet av arbete inom funktionshinderområdet och gärna som boendestödjare. Även utbildning inom området är meriterande. Det är meriterande med erfarenhet av neuropsykiatriska funktionsnedsättningar. Störst vikt fäster vi dock vid den personliga lämpligheten. Du bör vara trygg i dig själv och bekväm med att arbeta med personer som är i stort behov av kontinuitet, struktur och omvårdnad. Särskild vikt läggs på faktorer som bemötande, människosyn och empati. \nDu ska behärska svenska språket väl i tal och skrift. God datavana krävs då mycket av dokumentationen görs på dator. \nVid anställningsintervjun vill vi att du visar upp ett utdrag ur Polisens belastningsregister.\n\nLåter det här som ett jobb för dig? Sök tjänsten direkt då vi tillsätter löpande.\n\nVi är ett av de företag som deltar på Bazaren 2020 - \nkom och träffa oss på Stockholm Water Front intill Stockholms centralstation.\n\nSkriv följande i din ansökan:\n- Din arbetslivserfarenhet samt utbildning.\n- När och i vilken utsträckning du kan jobba (dag/kväll/natt, när/hur många veckor) \n\r\n\nFacklig kontaktperson\nFör facklig kontaktperson för tjänsten se http://www.huddinge.se/kontaktpersonerfack\n\n\nVi undanber oss alla erbjudanden om annonsering och rekryteringshjälp i samband med denna annons.",
+      "text_formatted": "Huddinge är en växande Stockholmskommun med närhet till både stad och natur. Som medarbetare hos oss är du en viktig samhällsbyggare. Tillsammans skapar vi ett hållbart samhälle för alla som bor, besöker och arbetar i Huddinge.\r\n\r\nOm arbetsplatsen\nVikariepoolen ansvarar för funktionshinderområdets och hemtjänstens vikariehantering. Det innebär att vi bemannar funktionshinderområdets och hemtjänstens verksamheter vid korttidsfrånvaro, till exempel vid semester, sjukdom eller utbildning. De verksamheter vi bemannar är personlig assistans, gruppbostäder, servicebostäder, korttidshem, boendestöd, daglig verksamhet och eftermiddagstillsyn för barn över 12 år.\n\r\n\r\n-\r\n\r\nArbetsuppgifter\nVi söker just nu ett flertal stödassistenter/boendestödjare till våra serviceboenden. Som timvikarie på vikariepoolen kan du komma att arbeta på en eller flera olika boenden i Huddinge kommun. På de serviceboenden dessa tjänster gäller bor personer med asperger/ASD och andra neuropsykiatriska funktionsnedsättningar. På vissa enheter kan det förekomma utmanande beteende. \nArbetet som boendestödjare/stödassistent innebär att erbjuda våra brukare ett individuellt anpassat stöd i sin dagliga livsföring, Det innebär stödja brukarna i omvårdnad, aktiviteter och alla i hem förekommande sysslor. Brukarnas individuella stöd styrs utifrån brukarens individuella genomförandeplan. Både arbete dag-, kväll-, och nattetid förekommer.\nFör att vara aktuell för tjänsten krävs att du kan arbeta minst 6 veckor heltid i sommar mellan vecka 25-35. Vi ser helst att du även kan arbeta extra under tiden från och med nu och fram till semesterperioden, men ett minimikrav är att du kan gå ca 5 intropass innan semestervikariatet börjar. Det finns också goda möjligheter att fortsätta arbeta i höst som timvikarie. \n\r\n\r\nVi söker dig som har erfarenhet av arbete inom funktionshinderområdet och gärna som boendestödjare. Även utbildning inom området är meriterande. Det är meriterande med erfarenhet av neuropsykiatriska funktionsnedsättningar. Störst vikt fäster vi dock vid den personliga lämpligheten. Du bör vara trygg i dig själv och bekväm med att arbeta med personer som är i stort behov av kontinuitet, struktur och omvårdnad. Särskild vikt läggs på faktorer som bemötande, människosyn och empati. \nDu ska behärska svenska språket väl i tal och skrift. God datavana krävs då mycket av dokumentationen görs på dator. \nVid anställningsintervjun vill vi att du visar upp ett utdrag ur Polisens belastningsregister.\n\nLåter det här som ett jobb för dig? Sök tjänsten direkt då vi tillsätter löpande.\n\nVi är ett av de företag som deltar på Bazaren 2020 - \nkom och träffa oss på Stockholm Water Front intill Stockholms centralstation.\n\nSkriv följande i din ansökan:\n- Din arbetslivserfarenhet samt utbildning.\n- När och i vilken utsträckning du kan jobba (dag/kväll/natt, när/hur många veckor) \n\r\n\nFacklig kontaktperson\nFör facklig kontaktperson för tjänsten se http://www.huddinge.se/kontaktpersonerfack\n\n\nVi undanber oss alla erbjudanden om annonsering och rekryteringshjälp i samband med denna annons.",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": "Sommarvikariat och timanställning, tillträde enligt överenskommelse,\r\nDag, kväll, natt och helg."
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": "Lön enligt avtal.",
+    "duration": {
+      "concept_id": "qQUd_4qe_NDT",
+      "label": "6 månader eller längre",
+      "legacy_ams_taxonomy_id": "2"
+    },
+    "working_hours_type": {
+      "concept_id": "6YE1_gAC_R2G",
+      "label": "Heltid",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "scope_of_work": {
+      "min": 100,
+      "max": 100
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": "www.huddinge.se",
+      "organization_number": "2120000068",
+      "name": "Huddinge kommun",
+      "workplace": "Huddinge kommun"
+    },
+    "application_details": {
+      "information": null,
+      "reference": "SOF:2020:21",
+      "email": null,
+      "via_af": false,
+      "url": "https://www.huddinge.se/arbete-och-karriar/ledigajobb/?jobbid=6340772375153074412",
+      "other": null
+    },
+    "experience_required": true,
+    "access_to_own_car": false,
+    "driving_license_required": false,
+    "driving_license": null,
+    "occupation": {
+      "concept_id": "c32f_KpH_CfN",
+      "label": "Vårdare/Arbetshandledare/Boendestödjare",
+      "legacy_ams_taxonomy_id": "6317"
+    },
+    "occupation_group": {
+      "concept_id": "7pz9_eY9_D2s",
+      "label": "Vårdare, boendestödjare",
+      "legacy_ams_taxonomy_id": "5342"
+    },
+    "occupation_field": {
+      "concept_id": "GazW_2TU_kJw",
+      "label": "Socialt arbete",
+      "legacy_ams_taxonomy_id": "16"
+    },
+    "workplace_address": {
+      "municipality": "Huddinge",
+      "municipality_code": "0126",
+      "municipality_concept_id": "g1Gc_aXK_EKu",
+      "region": "Stockholms län",
+      "region_code": "01",
+      "region_concept_id": "CifL_Rzy_Mku",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": null,
+      "postcode": null,
+      "city": null,
+      "coordinates": [
+        17.982157,
+        59.23633
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": [
+        {
+          "weight": 10,
+          "concept_id": "c32f_KpH_CfN",
+          "label": "Vårdare/Arbetshandledare/Boendestödjare",
+          "legacy_ams_taxonomy_id": "6317"
+        }
+      ]
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "publication_date": "2020-02-27T16:00:15",
+    "last_publication_date": "2020-03-12T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_PLATSBANKEN_DXA",
+    "timestamp": 1582815615540
+  },
+  {
+    "id": "23905979",
+    "external_id": "46-212000-1090-031E09F35F9C48F2B98E8E802DCFD98B",
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23905979",
+    "logo_url": "https://www.arbetsformedlingen.se/rest/arbetsgivare/rest/af/v3/organisation/2120001090/logotyper/logo.png",
+    "headline": "Sjuksköterska, tillsvidaretjänst Natt ",
+    "application_deadline": "2020-03-15T23:59:59",
+    "number_of_vacancies": 1,
+    "description": {
+      "text": "Våra 1100 medarbetare spelar en viktig roll för Sjöbos utveckling och välfärd. Vi strävar kontinuerligt efter att bli en mer attraktiv och jämlik arbetsgivare, och erbjuder våra medarbetare ett brett friskvårdsutbud, rökfri arbetstid och flexibla arbetstider där det är möjligt.  Vårt arbete genomsyras av värdeorden \"Professionella, öppna och engagerade mot gemensamma mål\" Tillsammans gör vi skillnad för Sjöbo kommuns medborgare och besökare!\n\nInom vård- och omsorgsförvaltningen ryms verksamheterna äldreomsorg, verksamhet för personer med funktionsnedsättning samt kommunens måltidsverksamhet. \nVård och omsorgsförvaltningen i Sjöbo kommun arbetar efter visionen om Ett Gott Liv Varje Dag för våra kunder.\r\n\r\nARBETSUPPGIFTER\nVi söker en sjuksköterska till kommunal verksamhet i särskilt, ordinärt och LSS-boende, nattjänst på ca 80 %. \nArbetsuppgifterna innebär sedvanliga sjuksköterskeuppgifter inom kommunal hälso- och sjukvård.\nI arbetet ingår att handleda, delegera och utbilda omsorgspersonal i hälso- och sjukvårdsuppgifter. Dokumentation sker i Procapita. I nattjänsten ingår arbete var tredje helg.\r\n\r\nKVALIFIKATIONER\nLeg. sjuksköterska. Gärna med vidareutbildning som distriktssköterska eller kring vård av äldre. Vi söker dig som är trygg i din yrkesroll och kan arbeta självständigt. Arbetet ställer krav på flexibilitet, god kommunikationsförmåga och samarbetsförmåga. Du är en positiv och engagerad person med intresse av den kommunala hälso- och sjukvården såväl i ordinärt som i särskilt boende. \n\nUrval och intervjuer sker löpande.\n\nTjänsten är på ca 80% natt med ev. ytterligare tjänstgöringsgrad i form av kväll, om du skulle vara intresserad av det.\r\n\nÖVRIGT\nInför rekryteringsarbetet har Sjöbo kommun noggrant tagit ställning till rekryteringskanaler och marknadsföring. Vi undanber oss därför bestämt kontakt med mediesäljare, rekryteringssajter och liknande.\nVi värdesätter de kvaliteter som mångfald och jämn könsfördelning tillför verksamheten och ser därför gärna sökande med olika bakgrund och livserfarenhet till tjänsten.\nSjöbo är en expansiv kommun mitt i södra Skåne. Här bor 19 200 invånare som har nära till den omväxlande naturen och många olika boendeformer att välja på.",
+      "text_formatted": "Våra 1100 medarbetare spelar en viktig roll för Sjöbos utveckling och välfärd. Vi strävar kontinuerligt efter att bli en mer attraktiv och jämlik arbetsgivare, och erbjuder våra medarbetare ett brett friskvårdsutbud, rökfri arbetstid och flexibla arbetstider där det är möjligt.  Vårt arbete genomsyras av värdeorden \"Professionella, öppna och engagerade mot gemensamma mål\" Tillsammans gör vi skillnad för Sjöbo kommuns medborgare och besökare!\n\nInom vård- och omsorgsförvaltningen ryms verksamheterna äldreomsorg, verksamhet för personer med funktionsnedsättning samt kommunens måltidsverksamhet. \nVård och omsorgsförvaltningen i Sjöbo kommun arbetar efter visionen om Ett Gott Liv Varje Dag för våra kunder.\r\n\r\nARBETSUPPGIFTER\nVi söker en sjuksköterska till kommunal verksamhet i särskilt, ordinärt och LSS-boende, nattjänst på ca 80 %. \nArbetsuppgifterna innebär sedvanliga sjuksköterskeuppgifter inom kommunal hälso- och sjukvård.\nI arbetet ingår att handleda, delegera och utbilda omsorgspersonal i hälso- och sjukvårdsuppgifter. Dokumentation sker i Procapita. I nattjänsten ingår arbete var tredje helg.\r\n\r\nKVALIFIKATIONER\nLeg. sjuksköterska. Gärna med vidareutbildning som distriktssköterska eller kring vård av äldre. Vi söker dig som är trygg i din yrkesroll och kan arbeta självständigt. Arbetet ställer krav på flexibilitet, god kommunikationsförmåga och samarbetsförmåga. Du är en positiv och engagerad person med intresse av den kommunala hälso- och sjukvården såväl i ordinärt som i särskilt boende. \n\nUrval och intervjuer sker löpande.\n\nTjänsten är på ca 80% natt med ev. ytterligare tjänstgöringsgrad i form av kväll, om du skulle vara intresserad av det.\r\n\nÖVRIGT\nInför rekryteringsarbetet har Sjöbo kommun noggrant tagit ställning till rekryteringskanaler och marknadsföring. Vi undanber oss därför bestämt kontakt med mediesäljare, rekryteringssajter och liknande.\nVi värdesätter de kvaliteter som mångfald och jämn könsfördelning tillför verksamheten och ser därför gärna sökande med olika bakgrund och livserfarenhet till tjänsten.\nSjöbo är en expansiv kommun mitt i södra Skåne. Här bor 19 200 invånare som har nära till den omväxlande naturen och många olika boendeformer att välja på.",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": "Deltid. ca 80 % natt med ev. ytterligare tjänstgöringsgrad i form av kväll  Schema.\r\nTillsvidareanställning, tillträde: Tillträde enligt överenskommelse."
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": "Månadslön",
+    "duration": {
+      "concept_id": "a7uU_j21_mkL",
+      "label": "Tillsvidare",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "working_hours_type": {
+      "concept_id": "947z_JGS_Uk2",
+      "label": "Deltid",
+      "legacy_ams_taxonomy_id": "2"
+    },
+    "scope_of_work": {
+      "min": 80,
+      "max": 100
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": "http://www.sjobo.se/naringsliv-och-arbete/kommunen-som-arbetsgivare/arbeta-hos-oss/",
+      "organization_number": "2120001090",
+      "name": "Sjöbo kommun",
+      "workplace": "Sjöbo kommun, Vård och omsorgsförvaltningen, Hemsjukvård Rehab"
+    },
+    "application_details": {
+      "information": null,
+      "reference": "31/20",
+      "email": null,
+      "via_af": false,
+      "url": "https://recruit.visma.com/Public/Apply.aspx?guidAssignment=031e09f3-5f9c-48f2-b98e-8e802dcfd98b&publishCode=AMS&TK=8057eda7-1e39-4fe9-a4a5-7d08c7da3510",
+      "other": null
+    },
+    "experience_required": true,
+    "access_to_own_car": false,
+    "driving_license_required": false,
+    "driving_license": null,
+    "occupation": {
+      "concept_id": "bXNH_MNX_dUR",
+      "label": "Sjuksköterska, grundutbildad",
+      "legacy_ams_taxonomy_id": "7296"
+    },
+    "occupation_group": {
+      "concept_id": "Z8ci_bBE_tmx",
+      "label": "Grundutbildade sjuksköterskor",
+      "legacy_ams_taxonomy_id": "2221"
+    },
+    "occupation_field": {
+      "concept_id": "NYW6_mP6_vwf",
+      "label": "Hälso- och sjukvård",
+      "legacy_ams_taxonomy_id": "8"
+    },
+    "workplace_address": {
+      "municipality": "Sjöbo",
+      "municipality_code": "1265",
+      "municipality_concept_id": "P3Cs_1ZP_9XB",
+      "region": "Skåne län",
+      "region_code": "12",
+      "region_concept_id": "CaRE_1nn_cSU",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": null,
+      "postcode": null,
+      "city": null,
+      "coordinates": [
+        13.70337,
+        55.634823
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": [
+        {
+          "weight": 10,
+          "concept_id": "bXNH_MNX_dUR",
+          "label": "Sjuksköterska, grundutbildad",
+          "legacy_ams_taxonomy_id": "7296"
+        }
+      ]
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "publication_date": "2020-02-28T00:00:00",
+    "last_publication_date": "2020-03-15T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_PLATSBANKEN_DXA",
+    "timestamp": 1582815635322
+  },
+  {
+    "id": "23905028",
+    "external_id": null,
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23905028",
+    "logo_url": "https://www.arbetsformedlingen.se/rest/arbetsgivare/rest/af/v3/arbetsplatser/87425671/logotyper/logo.png",
+    "headline": "Lagbas  Anläggning",
+    "application_deadline": "2020-03-28T23:59:59",
+    "number_of_vacancies": 1,
+    "description": {
+      "text": "Vi söker nu en erfaren lagbas till vår filial i Härnösand. Som lagbas hos oss på Höga Kusten Skog & Fastighet blir du en del av ett härligt gäng som arbetar med spännande uppdrag inom grönyteskötsel. Tjänsten som lagbas innefattar samordning och arbetsledning av personal, underentreprenörer och övriga leverantörer, att genom ronderingar och uppföljningar säkerställa att arbetet håller en hög kvalité och utförs enligt kundens förväntningar. I tjänsten ingår en del administrativa sysslor så som planering, dagbokshantering, inköpshantering, etc. Rollen innebär också en stor del arbete ute i produktionen i form av anläggningsarbeten samt  sysslor inom utemiljöskötsel.\nVem söker vi?\nVi söker dig som har minst 1 års erfarenhet av att leda arbete inom anläggning och minst 1 år som anläggare.  \nSom person är du resultatinriktad, kvalitetsmedveten och ansvarstagande. Du drivs av att arbeta målorienterat och har förmågan att strukturera och prioritera i ditt arbete. Viktigt för rollen är att du är tydlig och engagerande i din kommunikation. Tjänsten inkluderar även kundkontakt - så att du är en social person som tycker om att träffa nya människor och bygga långsiktiga relationer är viktigt.\nDu kommunicerar väl på svenska, har god datavana och B-körkort. \nTjänsten är en heltidsanställning med 6 månaders provanställning.\nLåter detta som något för dig? Vill du arbeta i en spännande miljö på ett företag som bokstavligen växer så det knakar? Tveka då inte, utan skicka in din ansökan redan idag!\n\n\nLite om företaget \nHöga Kusten Skog & Fastighet AB är ett entreprenadföretag inom fastighetsskötsel och skogsvård som vuxit kraftigt sedan starten 2013 och har nu uppåt 80 anställda under högsäsong och genomsnittligt ca 35 helårsanställda. Omsättningen har ökat från 3 200 tkr första året till en bit över 43 000 tkr för förra verksamhetsåret. Företaget finns i dagsläget etablerat på 6 orter från Sollentuna i Söder till Örnsköldsvik i norr.",
+      "text_formatted": "<p>Vi söker nu en <strong>erfaren lagbas </strong>till vår filial i Härnösand. Som lagbas hos oss på Höga Kusten Skog &amp; Fastighet blir du en del av ett härligt gäng som arbetar med spännande uppdrag inom grönyteskötsel. Tjänsten som lagbas innefattar samordning och arbetsledning av personal, underentreprenörer och övriga leverantörer, att genom ronderingar och uppföljningar säkerställa att arbetet håller en hög kvalité och utförs enligt kundens förväntningar. I tjänsten ingår en del administrativa sysslor så som planering, dagbokshantering, inköpshantering, etc. Rollen innebär också en stor del arbete ute i produktionen i form av anläggningsarbeten samt  sysslor inom utemiljöskötsel.</p><p><strong>Vem söker vi?</strong></p><p>Vi söker dig som har minst 1 års erfarenhet av att leda arbete inom anläggning och minst 1 år som anläggare.  </p><p>Som person är du resultatinriktad, kvalitetsmedveten och ansvarstagande. Du drivs av att arbeta målorienterat och har förmågan att strukturera och prioritera i ditt arbete. Viktigt för rollen är att du är tydlig och engagerande i din kommunikation. Tjänsten inkluderar även kundkontakt - så att du är en social person som tycker om att träffa nya människor och bygga långsiktiga relationer är viktigt.</p><p>Du kommunicerar väl på svenska, har god datavana och B-körkort. </p><p>Tjänsten är en heltidsanställning med 6 månaders provanställning.</p><p>Låter detta som något för dig? Vill du arbeta i en spännande miljö på ett företag som bokstavligen växer så det knakar? Tveka då inte, utan skicka in din ansökan redan idag!</p><p><br></p><p><strong>Lite om företaget </strong></p><p>Höga Kusten Skog &amp; Fastighet AB är ett entreprenadföretag inom fastighetsskötsel och skogsvård som vuxit kraftigt sedan starten 2013 och har nu uppåt 80 anställda under högsäsong och genomsnittligt ca 35 helårsanställda. Omsättningen har ökat från 3 200 tkr första året till en bit över 43 000 tkr för förra verksamhetsåret. Företaget finns i dagsläget etablerat på 6 orter från Sollentuna i Söder till Örnsköldsvik i norr.&#xa0;</p>",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": null
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": null,
+    "duration": {
+      "concept_id": "a7uU_j21_mkL",
+      "label": "Tillsvidare",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "working_hours_type": {
+      "concept_id": "6YE1_gAC_R2G",
+      "label": "Heltid",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "scope_of_work": {
+      "min": 100,
+      "max": 100
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": "www.hksf.se",
+      "organization_number": "5569255788",
+      "name": "Höga Kusten Skog & Fastighet AB",
+      "workplace": "Höga Kusten Skog & Fastighet AB Härnösand"
+    },
+    "application_details": {
+      "information": null,
+      "reference": "Lagbas Anläggning Härnösand",
+      "email": "Daniel.kjellsson@hksf.se",
+      "via_af": false,
+      "url": null,
+      "other": "Mikael.nyberg.se"
+    },
+    "experience_required": true,
+    "access_to_own_car": false,
+    "driving_license_required": true,
+    "driving_license": [
+      {
+        "concept_id": "VTK8_WRx_GcM",
+        "label": "B"
+      }
+    ],
+    "occupation": {
+      "concept_id": "MQHi_q9J_x2d",
+      "label": "Väg-och anläggningsarbetare",
+      "legacy_ams_taxonomy_id": "5871"
+    },
+    "occupation_group": {
+      "concept_id": "bZ4J_riZ_zK6",
+      "label": "Anläggningsarbetare",
+      "legacy_ams_taxonomy_id": "7114"
+    },
+    "occupation_field": {
+      "concept_id": "j7Cq_ZJe_GkT",
+      "label": "Bygg och anläggning",
+      "legacy_ams_taxonomy_id": "2"
+    },
+    "workplace_address": {
+      "municipality": "Härnösand",
+      "municipality_code": "2280",
+      "municipality_concept_id": "uYRx_AdM_r4A",
+      "region": "Västernorrlands län",
+      "region_code": "22",
+      "region_concept_id": "NvUF_SP1_1zo",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": "Industrigatan",
+      "postcode": "87154",
+      "city": "Härnösand",
+      "coordinates": [
+        17.9060505951044,
+        62.6540145675248
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": [
+        {
+          "weight": 10,
+          "concept_id": "MQHi_q9J_x2d",
+          "label": "Väg-och anläggningsarbetare",
+          "legacy_ams_taxonomy_id": "5871"
+        }
+      ]
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "publication_date": "2020-02-27T13:09:19",
+    "last_publication_date": "2020-03-28T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_ANNONSERA",
+    "timestamp": 1582815624988
+  },
+  {
+    "id": "23905964",
+    "external_id": null,
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23905964",
+    "logo_url": null,
+    "headline": "Bilrecond",
+    "application_deadline": "2020-03-28T23:59:59",
+    "number_of_vacancies": 1,
+    "description": {
+      "text": "Kompetensprofil\n Vi söker dig som vill lära dig att självständigt arbeta med drift- och servicearbeten inom bilvård och bilservice. Du är händig och har kanske en teknisk utbildning på minst gymnasienivå.\n \n \n Som person är du en utpräglad problemlösare med ett tydligt kund- och servicefokus. Du är van att ta egna initiativ och bra på att kommunicera med besökare och personal. Du är ansvarstagande och tar kloka beslut.\nDu ska vara noggrann och flexibel. Du är strukturerad, genomför ditt arbete och håller hög kvalitet i samtliga processer.\n \n \n Ordinarie arbetstid 8 timmar per dag måndag till fredag. Viss övertid förekommer. Albanska språk är meriterande.",
+      "text_formatted": "<p>Kompetensprofil</p><p> Vi söker dig som vill lära dig att självständigt arbeta med drift- och servicearbeten inom bilvård och bilservice. Du är händig och har kanske en teknisk utbildning på minst gymnasienivå.</p><p> </p><p> </p><p> Som person är du en utpräglad problemlösare med ett tydligt kund- och servicefokus. Du är van att ta egna initiativ och bra på att kommunicera med besökare och personal. Du är ansvarstagande och tar kloka beslut.</p><p>Du ska vara noggrann och flexibel. Du är strukturerad, genomför ditt arbete och håller hög kvalitet i samtliga processer.</p><p> </p><p> </p><p> Ordinarie arbetstid 8 timmar per dag måndag till fredag. Viss övertid förekommer. Albanska språk är meriterande.</p>",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": null
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": null,
+    "duration": {
+      "concept_id": "a7uU_j21_mkL",
+      "label": "Tillsvidare",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "working_hours_type": {
+      "concept_id": "6YE1_gAC_R2G",
+      "label": "Heltid",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "scope_of_work": {
+      "min": 100,
+      "max": 100
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": "www.vbgbil.se",
+      "organization_number": "5591843247",
+      "name": "VBG BIL AB",
+      "workplace": "VBG BIL AB"
+    },
+    "application_details": {
+      "information": null,
+      "reference": null,
+      "email": "info@vbgbil.se",
+      "via_af": false,
+      "url": null,
+      "other": null
+    },
+    "experience_required": true,
+    "access_to_own_car": false,
+    "driving_license_required": true,
+    "driving_license": [
+      {
+        "concept_id": "VTK8_WRx_GcM",
+        "label": "B"
+      }
+    ],
+    "occupation": {
+      "concept_id": "gP3r_Q2H_ht9",
+      "label": "Bilrekonditionerare",
+      "legacy_ams_taxonomy_id": "396"
+    },
+    "occupation_group": {
+      "concept_id": "FjdF_H2e_tAG",
+      "label": "Bilrekonditionerare, fönsterputsare m.fl.",
+      "legacy_ams_taxonomy_id": "9120"
+    },
+    "occupation_field": {
+      "concept_id": "whao_Q6A_ScE",
+      "label": "Sanering och renhållning",
+      "legacy_ams_taxonomy_id": "12"
+    },
+    "workplace_address": {
+      "municipality": "Varberg",
+      "municipality_code": "1383",
+      "municipality_concept_id": "AkUx_yAq_kGr",
+      "region": "Hallands län",
+      "region_code": "13",
+      "region_concept_id": "wjee_qH2_yb6",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": "Birger Svenssons Väg 21",
+      "postcode": "43240",
+      "city": "Varberg",
+      "coordinates": [
+        12.26065145287631,
+        57.11896018906507
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [
+        {
+          "weight": 10,
+          "concept_id": "rod1_aPk_8V5",
+          "label": "Albanska",
+          "legacy_ams_taxonomy_id": "243"
+        }
+      ],
+      "work_experiences": [
+        {
+          "weight": 10,
+          "concept_id": "gP3r_Q2H_ht9",
+          "label": "Bilrekonditionerare",
+          "legacy_ams_taxonomy_id": "396"
+        }
+      ]
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "publication_date": "2020-02-27T15:59:54",
+    "last_publication_date": "2020-03-28T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_ANNONSERA",
+    "timestamp": 1582815594653
+  },
+  {
+    "id": "23905511",
+    "external_id": "46-232100-0131-320865",
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23905511",
+    "logo_url": "https://www.arbetsformedlingen.se/rest/arbetsgivare/rest/af/v3/organisation/2321000131/logotyper/logo.png",
+    "headline": "Undersköterska - vi söker dig till vårt team på avdelning 18!",
+    "application_deadline": "2020-03-12T23:59:59",
+    "number_of_vacancies": 1,
+    "description": {
+      "text": "Tillsammans skapar vi på Sahlgrenska Universitetssjukhuset vård av högsta kvalitet med patienten i fokus. Med stort engagemang och ständigt lärande är vi ett av landets ledande universitetssjukhus. Vi bedriver allt från länssjukvård till högspecialiserad rikssjukvård. Genom intressant forskning har vi en inriktning mot framtidens sjukvård. I vårt arbete tar vi tillvara den bredd av kunskap och erfarenhet vi gemensamt har – Tillsammans med dig vill vi skapa värde för våra patienter.\n\n\r\n\r\nÄr du undersköterska och nyfiken på att arbeta inom Öron-, näs- och halsverksamheten? Bli en del av vårt team på avdelning 18! \n\nVår verksamhet \n\nAvdelning 18 är en kirurgisk akutavdelning.\r\n\r\nVårt profilområde är Öron-, näs- och halskirurgi med tyngdpunkt på pre- och postoperativ omvårdnad. Högprofilerade områden är trakeostomivård och nutrition. Vi har en hög patientgenomströmning och många av våra patienter har en förväntad kort vårdtid, men vi har också patienter som stannar längre, exempelvis våra cancerpatienter som kan ha genomgått omfattande kirurgiska ingrepp.\n\nHur ser ett arbetspass ut? \n\nHos oss kommer du att arbeta med omvårdnadsarbete, omläggningar och hjälpa patienter med den dagliga omvårdnaden. På avdelning 18 har de flesta undersköterskor delegering på tracheostomivård, PEG-skötsel och koppling av sondvälling. Lämplighet för detta bedöms från fall till fall. Fler delegerade arbetsuppgifter kan bli aktuella och bedöms i sådant fall tillsammans med dig utifrån avdelningens behov och den personliga lämpligheten.\n\nSom undersköterska på avdelning 18 får du möjlighet att ta ansvar och utvecklas i såväl din kompetens, som i din karriär.\n\nVem söker vi?\n\nVi söker dig med gymnasial- eller motsvarande slutförd undersköterskeutbildning. Sjukhusvana av nutritions-, sår- och tracheostomivård är meriterande. Vi tror att du som vill börja arbeta hos oss gillar akutkirurgi och varierade arbetsdagar där ingen dag är den andra lik. Att du som söker är flexibel, samarbets- och temainriktad, prestigelös samt har förmågan att ta egna initiativ till förbättringar ses som stora fördelar. Stor vikt läggs vid personliga egenskaper.\n\nVi ser framemot din ansökan, välkommen!\n\nOm Västra Götalandsregionen\nVästra Götalandsregionen finns till för människorna i Västra Götaland. Vi ser till att det finns god hälso- och sjukvård för alla. Vi arbetar för en hållbar utveckling och tillväxt, bra miljö, förbättrad folkhälsa, ett rikt kulturliv och goda kommunikationer i hela Västra Götaland.\n\n\nAnsökan\nVästra Götalandsregionen ser helst att du registrerar din ansökan via rekryteringssystemet. Om du som sökande har frågor om den utannonserade tjänsten eller av särskilda och speciella skäl inte kan registrera dina uppgifter i ett offentligt system - kontakta kontaktperson för respektive annons.\n\n\nTill bemannings-, förmedlings- och rekryteringsföretag och till dig som är försäljare:\nVi undanber oss vänligen men bestämt direktkontakt med bemannings-, förmedlings- och rekryteringsföretag samt andra externa aktörer och försäljare av ytterligare jobbannonser. Västra Götalandsregionen har upphandlade avtal.",
+      "text_formatted": "Tillsammans skapar vi på Sahlgrenska Universitetssjukhuset vård av högsta kvalitet med patienten i fokus. Med stort engagemang och ständigt lärande är vi ett av landets ledande universitetssjukhus. Vi bedriver allt från länssjukvård till högspecialiserad rikssjukvård. Genom intressant forskning har vi en inriktning mot framtidens sjukvård. I vårt arbete tar vi tillvara den bredd av kunskap och erfarenhet vi gemensamt har – Tillsammans med dig vill vi skapa värde för våra patienter.\n\n\r\n\r\nÄr du undersköterska och nyfiken på att arbeta inom Öron-, näs- och halsverksamheten? Bli en del av vårt team på avdelning 18! \n\nVår verksamhet \n\nAvdelning 18 är en kirurgisk akutavdelning.\r\n\r\nVårt profilområde är Öron-, näs- och halskirurgi med tyngdpunkt på pre- och postoperativ omvårdnad. Högprofilerade områden är trakeostomivård och nutrition. Vi har en hög patientgenomströmning och många av våra patienter har en förväntad kort vårdtid, men vi har också patienter som stannar längre, exempelvis våra cancerpatienter som kan ha genomgått omfattande kirurgiska ingrepp.\n\nHur ser ett arbetspass ut? \n\nHos oss kommer du att arbeta med omvårdnadsarbete, omläggningar och hjälpa patienter med den dagliga omvårdnaden. På avdelning 18 har de flesta undersköterskor delegering på tracheostomivård, PEG-skötsel och koppling av sondvälling. Lämplighet för detta bedöms från fall till fall. Fler delegerade arbetsuppgifter kan bli aktuella och bedöms i sådant fall tillsammans med dig utifrån avdelningens behov och den personliga lämpligheten.\n\nSom undersköterska på avdelning 18 får du möjlighet att ta ansvar och utvecklas i såväl din kompetens, som i din karriär.\n\nVem söker vi?\n\nVi söker dig med gymnasial- eller motsvarande slutförd undersköterskeutbildning. Sjukhusvana av nutritions-, sår- och tracheostomivård är meriterande. Vi tror att du som vill börja arbeta hos oss gillar akutkirurgi och varierade arbetsdagar där ingen dag är den andra lik. Att du som söker är flexibel, samarbets- och temainriktad, prestigelös samt har förmågan att ta egna initiativ till förbättringar ses som stora fördelar. Stor vikt läggs vid personliga egenskaper.\n\nVi ser framemot din ansökan, välkommen!\n\nOm Västra Götalandsregionen\nVästra Götalandsregionen finns till för människorna i Västra Götaland. Vi ser till att det finns god hälso- och sjukvård för alla. Vi arbetar för en hållbar utveckling och tillväxt, bra miljö, förbättrad folkhälsa, ett rikt kulturliv och goda kommunikationer i hela Västra Götaland.\n\n\nAnsökan\nVästra Götalandsregionen ser helst att du registrerar din ansökan via rekryteringssystemet. Om du som sökande har frågor om den utannonserade tjänsten eller av särskilda och speciella skäl inte kan registrera dina uppgifter i ett offentligt system - kontakta kontaktperson för respektive annons.\n\n\nTill bemannings-, förmedlings- och rekryteringsföretag och till dig som är försäljare:\nVi undanber oss vänligen men bestämt direktkontakt med bemannings-, förmedlings- och rekryteringsföretag samt andra externa aktörer och försäljare av ytterligare jobbannonser. Västra Götalandsregionen har upphandlade avtal.",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": " 100%. Tillträde: Enligt överenskommelse\r\nTillsvidareanställning"
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": "Individuell lönesättning",
+    "duration": {
+      "concept_id": "a7uU_j21_mkL",
+      "label": "Tillsvidare",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "working_hours_type": {
+      "concept_id": "6YE1_gAC_R2G",
+      "label": "Heltid",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "scope_of_work": {
+      "min": 100,
+      "max": 100
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": null,
+      "organization_number": "2321000131",
+      "name": "VÄSTRA GÖTALANDSREGIONEN",
+      "workplace": "Sahlgrenska Universitetssjukhuset, Öron-, näs- och halsmottagningen"
+    },
+    "application_details": {
+      "information": null,
+      "reference": "2020/1290",
+      "email": null,
+      "via_af": false,
+      "url": "https://vgregion.varbi.com/what:job/jobID:320865/type:job/where:1/apply:1",
+      "other": null
+    },
+    "experience_required": false,
+    "access_to_own_car": false,
+    "driving_license_required": false,
+    "driving_license": null,
+    "occupation": {
+      "concept_id": "PQkQ_Dmk_ZF8",
+      "label": "Undersköterska, vård- o specialavd. o mottagning",
+      "legacy_ams_taxonomy_id": "7587"
+    },
+    "occupation_group": {
+      "concept_id": "LP4Z_ABV_gRm",
+      "label": "Undersköterskor, vård- o specialavd o mottagning",
+      "legacy_ams_taxonomy_id": "5323"
+    },
+    "occupation_field": {
+      "concept_id": "NYW6_mP6_vwf",
+      "label": "Hälso- och sjukvård",
+      "legacy_ams_taxonomy_id": "8"
+    },
+    "workplace_address": {
+      "municipality": "Göteborg",
+      "municipality_code": "1480",
+      "municipality_concept_id": "PVZL_BQT_XtL",
+      "region": "Västra Götalands län",
+      "region_code": "14",
+      "region_concept_id": "zdoY_6u5_Krt",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": null,
+      "postcode": null,
+      "city": null,
+      "coordinates": [
+        11.97456,
+        57.70887
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "publication_date": "2020-02-27T16:00:36",
+    "last_publication_date": "2020-03-12T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_PLATSBANKEN_DXA",
+    "timestamp": 1582815636552
+  },
+  {
+    "id": "23905982",
+    "external_id": "46-556188-7562-320900",
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23905982",
+    "logo_url": "https://www.arbetsformedlingen.se/rest/arbetsgivare/rest/af/v3/organisation/5561887562/logotyper/logo.png",
+    "headline": "Max söker medarbetare inför sommaren",
+    "application_deadline": "2020-03-27T23:59:59",
+    "number_of_vacancies": 4,
+    "description": {
+      "text": "MAX är Sveriges äldsta burgarkedja och den enda rikstäckande burgarkedjan som bara använder svenskt kött, kyckling och bacon. Vi vill bli världens bästa burgarkedja och vägen dit är att göra världen lite godare, både genom att servera de godaste burgarna och genom att vara en god kraft i samhället. Vi har över 100 restauranger och sysselsätter cirka 5000 medarbetare.\n\n\n\r\n\r\nÄr du sugen på en karriär inom snabbmatsbranschen eller ett extra jobb vid sidan av studierna? Oavsett vilket mål du har för framtiden så tror vi du kan gilla att jobba hos oss!  \n\nMax utgångspunkt är alla människors lika värde.\r\n\r\nFör oss betyder det lika möjligheter, rättigheter och skyldigheter oavsett vem du är. Det är dina egna ambitioner och resultat som avgör hur långt du kan gå. Vi hjälper dig på vägen med en tydlig plan, interna utbildningar och goda utvecklingsmöjligheter på Sveriges godaste burgarkedja.\n\n \n\nSom restaurangbiträde serverar du gäster, jobbar i köket, kassan och håller rent i restaurangen. Tillsammans med dina kollegor ser du till att vi alltid serverar gästerna Sveriges godaste burgare. Arbetet innebär varierande arbetstider på dagar, kvällar, nätter och helger. Under handledning av restaurangchefen eller en erfaren kollega lär du dig jobbet steg för steg på de olika stationerna samt genom våra digitala utbildningar. Nästan alla våra chefer har börjat precis här.\n\n \n\nVem är du?\n\nFör att trivas hos oss behöver du vara serviceinriktad och gilla ett högt arbetstempo. Du tycker om att jobba i team och presterar bäst som en del av en grupp. Kvalitet är det allra viktigaste för oss och därför tror vi att du är noggrann men samtidigt effektiv.\n\n \n\nVad erbjuder vi?\n\nEtt fartfyllt jobb i ett sammansvetsat team med väldigt goda möjligheter att växa och utvecklas. Lön och villkor enligt kollektivavtal samt friskvårdsbidrag.\n\n \n\nVi tittar på ansökningarna löpande och jobbet kan tillsättas innan sista ansökningsdag. Välkommen med din ansökan!\n\nVill du läsa om hur vi hanterar dina personuppgifter? Gå in på www.max.se/dataskydd",
+      "text_formatted": "MAX är Sveriges äldsta burgarkedja och den enda rikstäckande burgarkedjan som bara använder svenskt kött, kyckling och bacon. Vi vill bli världens bästa burgarkedja och vägen dit är att göra världen lite godare, både genom att servera de godaste burgarna och genom att vara en god kraft i samhället. Vi har över 100 restauranger och sysselsätter cirka 5000 medarbetare.\n\n\n\r\n\r\nÄr du sugen på en karriär inom snabbmatsbranschen eller ett extra jobb vid sidan av studierna? Oavsett vilket mål du har för framtiden så tror vi du kan gilla att jobba hos oss!  \n\nMax utgångspunkt är alla människors lika värde.\r\n\r\nFör oss betyder det lika möjligheter, rättigheter och skyldigheter oavsett vem du är. Det är dina egna ambitioner och resultat som avgör hur långt du kan gå. Vi hjälper dig på vägen med en tydlig plan, interna utbildningar och goda utvecklingsmöjligheter på Sveriges godaste burgarkedja.\n\n \n\nSom restaurangbiträde serverar du gäster, jobbar i köket, kassan och håller rent i restaurangen. Tillsammans med dina kollegor ser du till att vi alltid serverar gästerna Sveriges godaste burgare. Arbetet innebär varierande arbetstider på dagar, kvällar, nätter och helger. Under handledning av restaurangchefen eller en erfaren kollega lär du dig jobbet steg för steg på de olika stationerna samt genom våra digitala utbildningar. Nästan alla våra chefer har börjat precis här.\n\n \n\nVem är du?\n\nFör att trivas hos oss behöver du vara serviceinriktad och gilla ett högt arbetstempo. Du tycker om att jobba i team och presterar bäst som en del av en grupp. Kvalitet är det allra viktigaste för oss och därför tror vi att du är noggrann men samtidigt effektiv.\n\n \n\nVad erbjuder vi?\n\nEtt fartfyllt jobb i ett sammansvetsat team med väldigt goda möjligheter att växa och utvecklas. Lön och villkor enligt kollektivavtal samt friskvårdsbidrag.\n\n \n\nVi tittar på ansökningarna löpande och jobbet kan tillsättas innan sista ansökningsdag. Välkommen med din ansökan!\n\nVill du läsa om hur vi hanterar dina personuppgifter? Gå in på www.max.se/dataskydd",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": " 0-8h/v. Tillträde: Omgående\r\nVisstidsanställning"
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": "Timlön",
+    "duration": {
+      "concept_id": "qQUd_4qe_NDT",
+      "label": "6 månader eller längre",
+      "legacy_ams_taxonomy_id": "2"
+    },
+    "working_hours_type": {
+      "concept_id": "947z_JGS_Uk2",
+      "label": "Deltid",
+      "legacy_ams_taxonomy_id": "2"
+    },
+    "scope_of_work": {
+      "min": 0,
+      "max": 100
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": null,
+      "organization_number": "5561887562",
+      "name": "Max Burgers AB",
+      "workplace": "Max Burgers AB, "
+    },
+    "application_details": {
+      "information": null,
+      "reference": "2020/180",
+      "email": null,
+      "via_af": false,
+      "url": "https://max.varbi.com/what:job/jobID:320900/type:job/where:1/apply:1",
+      "other": null
+    },
+    "experience_required": false,
+    "access_to_own_car": false,
+    "driving_license_required": false,
+    "driving_license": null,
+    "occupation": {
+      "concept_id": "yXRQ_Ad9_E8V",
+      "label": "Restaurangbiträde",
+      "legacy_ams_taxonomy_id": "5555"
+    },
+    "occupation_group": {
+      "concept_id": "tPox_ie4_X9X",
+      "label": "Restaurang- och köksbiträden m.fl.",
+      "legacy_ams_taxonomy_id": "9412"
+    },
+    "occupation_field": {
+      "concept_id": "ScKy_FHB_7wT",
+      "label": "Hotell, restaurang, storhushåll",
+      "legacy_ams_taxonomy_id": "7"
+    },
+    "workplace_address": {
+      "municipality": "Eskilstuna",
+      "municipality_code": "0484",
+      "municipality_concept_id": "kMxr_NiX_YrU",
+      "region": "Södermanlands län",
+      "region_code": "04",
+      "region_concept_id": "s93u_BEb_sx2",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": null,
+      "postcode": null,
+      "city": null,
+      "coordinates": [
+        16.509804,
+        59.37125
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "publication_date": "2020-02-27T16:00:55",
+    "last_publication_date": "2020-03-27T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_PLATSBANKEN_DXA",
+    "timestamp": 1582815655021
+  },
+  {
+    "id": "23862880",
+    "external_id": "46-556507-7160-00099183",
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23862880",
+    "logo_url": null,
+    "headline": "Barista Landvetter",
+    "application_deadline": "2020-04-30T23:59:59",
+    "number_of_vacancies": 4,
+    "description": {
+      "text": "Vi söker passionerade Baristor som vill satsa på Espresso House och leverera världens bästa kaffeupplevelse till världens bästa gäst! \n\nAllt startade år 1996 i den skånska staden Lund av två eldsjälar. Det var på Kyrkogatan vi slog upp dörrarna till den första coffee shopen. Idag är Espresso House Nordens största coffee shop kedja och drivs av cirka 5000 fantastiska medarbetare i Sverige, Norge, Danmark, Finland och Tyskland.  \n\nVi söker nu därför dig som är redo att kliva bakom baren och tillsammans med dina kollegor erbjuda världens bästa kaffeupplevelse till världens bästa gäst. Som Barista får du arbeta i en tempofylld miljö där den ena dagen inte är den andra lik. Givetvis blir du del av ett fantastiskt team där ni har kul bakom baren samtidigt som ni skapar lönsamhet. Espresso House är ledande inom branschen vilket betyder att du är en del av ett framgångsrikt företag med mycket goda utvecklingsmöjligheter. \n\n\nVi har tre coffee shops på Landvetterflygplatsen idag, inrikes, utrikes och vår minsta shop Expressen som ligger vid entrén i incheckningshallen. Vi söker dig som Älskar denna typ av miljö - fartfylld, glada resenärer och härlig energi!  \n\nDu är en flexibel person som har lätt för att anpassa dig till nya förutsättningar, tidig morgon och sena kvällar är något som du är van vid. Vi är på plats för att ge våra gäster den bästa starten de kan få på sin resa, genom snabbt och trevligt bemötande. En avgörande faktor för att du ska vara aktuell för uppdraget är att du kan ta dig till flygplatsen med bil och att du kan vara på plats 03:30 på morgonen och sena kvällar till 00:00. Vi har ett rullande schema så att man ska få så varierade arbetstider som möjligt.  \n\nDitt framtida jobb? \nDin allra främsta uppgift är att erbjuda våra gäster en kaffeupplevelse som överträffar deras förväntan! All arbetstid är förlagd i coffee shopen. Förutom hantering av kaffemaskin och kvarn består arbetet av kassaarbete, beredning av smörgåsar och sallader, diskplock samt andra vanligt förekommande arbetsuppgifter i café. Har du ingen Baristautbildning? Ingen fara - vi utbildar alla våra Baristor i egen regi. \n\nVad erbjuder du oss? \nDu är en glad och positiv person som smittar av sig till kollegor och gäster \nDu är tävlingsinriktad och drivs av försäljning \nDu är ansvarsfull och initiativrik och säkerställer att coffee shopen är i toppskick \nDu är en effektiv person som trivs bäst i ett högt tempo \nDu känner stolthet för det varumärke du arbetar för och ser din utveckling och framtid inom servicebranschen \nDu älskar att ha kul på jobbet\nVad erbjuder vi dig? \nVi befinner oss i en kraftig expansionsfas där du får möjlighet att bidra till att ett redan starkt varumärke blir ännu starkare. Vi satsar på våra medarbetare och det finns stora möjligheter att växa med oss. Espresso House är ett företag som kännetecknas av en stark kultur. Vi är stolta över det vi gör och vi har kul på jobbet samtidigt som vi skapar lönsamhet. På Espresso House är utbildning viktigt och alla våra medarbetare får genomgå en introduktion- samt Baristautbildning.  \n\nÖvrigt \nVi har kollektivavtal med HRF, lön enligt avtal. Arbetet innebär oregelbundna arbetstider; dag, kväll och helg. \nKrav på körkort och bil - Espresso House står för parkeringskostnaden och du får en högre timlön för att kompensera resekostnaden. \n\nAnsök \nVälkommen med din Ansökan! Rekryteringen sker löpande så skicka in din ansökan redan idag",
+      "text_formatted": "Vi söker passionerade Baristor som vill satsa på Espresso House och leverera världens bästa kaffeupplevelse till världens bästa gäst! \n\nAllt startade år 1996 i den skånska staden Lund av två eldsjälar. Det var på Kyrkogatan vi slog upp dörrarna till den första coffee shopen. Idag är Espresso House Nordens största coffee shop kedja och drivs av cirka 5000 fantastiska medarbetare i Sverige, Norge, Danmark, Finland och Tyskland.  \n\nVi söker nu därför dig som är redo att kliva bakom baren och tillsammans med dina kollegor erbjuda världens bästa kaffeupplevelse till världens bästa gäst. Som Barista får du arbeta i en tempofylld miljö där den ena dagen inte är den andra lik. Givetvis blir du del av ett fantastiskt team där ni har kul bakom baren samtidigt som ni skapar lönsamhet. Espresso House är ledande inom branschen vilket betyder att du är en del av ett framgångsrikt företag med mycket goda utvecklingsmöjligheter. \n\n\nVi har tre coffee shops på Landvetterflygplatsen idag, inrikes, utrikes och vår minsta shop Expressen som ligger vid entrén i incheckningshallen. Vi söker dig som Älskar denna typ av miljö - fartfylld, glada resenärer och härlig energi!  \n\nDu är en flexibel person som har lätt för att anpassa dig till nya förutsättningar, tidig morgon och sena kvällar är något som du är van vid. Vi är på plats för att ge våra gäster den bästa starten de kan få på sin resa, genom snabbt och trevligt bemötande. En avgörande faktor för att du ska vara aktuell för uppdraget är att du kan ta dig till flygplatsen med bil och att du kan vara på plats 03:30 på morgonen och sena kvällar till 00:00. Vi har ett rullande schema så att man ska få så varierade arbetstider som möjligt.  \n\nDitt framtida jobb? \nDin allra främsta uppgift är att erbjuda våra gäster en kaffeupplevelse som överträffar deras förväntan! All arbetstid är förlagd i coffee shopen. Förutom hantering av kaffemaskin och kvarn består arbetet av kassaarbete, beredning av smörgåsar och sallader, diskplock samt andra vanligt förekommande arbetsuppgifter i café. Har du ingen Baristautbildning? Ingen fara - vi utbildar alla våra Baristor i egen regi. \n\nVad erbjuder du oss? \nDu är en glad och positiv person som smittar av sig till kollegor och gäster \nDu är tävlingsinriktad och drivs av försäljning \nDu är ansvarsfull och initiativrik och säkerställer att coffee shopen är i toppskick \nDu är en effektiv person som trivs bäst i ett högt tempo \nDu känner stolthet för det varumärke du arbetar för och ser din utveckling och framtid inom servicebranschen \nDu älskar att ha kul på jobbet\nVad erbjuder vi dig? \nVi befinner oss i en kraftig expansionsfas där du får möjlighet att bidra till att ett redan starkt varumärke blir ännu starkare. Vi satsar på våra medarbetare och det finns stora möjligheter att växa med oss. Espresso House är ett företag som kännetecknas av en stark kultur. Vi är stolta över det vi gör och vi har kul på jobbet samtidigt som vi skapar lönsamhet. På Espresso House är utbildning viktigt och alla våra medarbetare får genomgå en introduktion- samt Baristautbildning.  \n\nÖvrigt \nVi har kollektivavtal med HRF, lön enligt avtal. Arbetet innebär oregelbundna arbetstider; dag, kväll och helg. \nKrav på körkort och bil - Espresso House står för parkeringskostnaden och du får en högre timlön för att kompensera resekostnaden. \n\nAnsök \nVälkommen med din Ansökan! Rekryteringen sker löpande så skicka in din ansökan redan idag",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": "Deltid 20%-40%"
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": "Lön enligt kollektivavtal HRF/Visita",
+    "duration": {
+      "concept_id": "a7uU_j21_mkL",
+      "label": "Tillsvidare",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "working_hours_type": {
+      "concept_id": "947z_JGS_Uk2",
+      "label": "Deltid",
+      "legacy_ams_taxonomy_id": "2"
+    },
+    "scope_of_work": {
+      "min": 20,
+      "max": 40
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": null,
+      "organization_number": "5565077160",
+      "name": "Espresso House Sweden AB",
+      "workplace": "Espresso House"
+    },
+    "application_details": {
+      "information": null,
+      "reference": null,
+      "email": null,
+      "via_af": false,
+      "url": "https://candidate.hr-manager.net/ApplicationInit.aspx?cid=1663&ProjectId=143768&DepartmentId=19152&MediaId=4617&SkipAdvertisement=true",
+      "other": null
+    },
+    "experience_required": false,
+    "access_to_own_car": true,
+    "driving_license_required": true,
+    "driving_license": [
+      {
+        "concept_id": "VTK8_WRx_GcM",
+        "label": "B"
+      }
+    ],
+    "occupation": {
+      "concept_id": "QREG_zsK_FLo",
+      "label": "Barista/Kaffebartender",
+      "legacy_ams_taxonomy_id": "6762"
+    },
+    "occupation_group": {
+      "concept_id": "XFXX_Jq9_Y2a",
+      "label": "Bartendrar",
+      "legacy_ams_taxonomy_id": "5132"
+    },
+    "occupation_field": {
+      "concept_id": "ScKy_FHB_7wT",
+      "label": "Hotell, restaurang, storhushåll",
+      "legacy_ams_taxonomy_id": "7"
+    },
+    "workplace_address": {
+      "municipality": "Borås",
+      "municipality_code": "1490",
+      "municipality_concept_id": "TpRZ_bFL_jhL",
+      "region": "Västra Götalands län",
+      "region_code": "14",
+      "region_concept_id": "zdoY_6u5_Krt",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": null,
+      "postcode": null,
+      "city": null,
+      "coordinates": [
+        12.939819,
+        57.721035
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "publication_date": "2020-02-27T16:00:10",
+    "last_publication_date": "2020-04-30T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_PLATSBANKEN_DXA",
+    "timestamp": 1582815610226
+  },
+  {
+    "id": "23905861",
+    "external_id": null,
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23905861",
+    "logo_url": "https://www.arbetsformedlingen.se/rest/arbetsgivare/rest/af/v3/arbetsplatser/85480436/logotyper/logo.png",
+    "headline": "Handbollstränare till lag i centrala Stockholm",
+    "application_deadline": "2020-03-28T23:59:59",
+    "number_of_vacancies": 3,
+    "description": {
+      "text": "Vi söker dig som vill ha ett extrajobb där du bland annat får utveckla dina ledaregenskaper. Du ska tycka om att jobba med barn och ungdomar och våga stå i centrum och leda en grupp. Att du är positiv och utåtriktad är ett stort plus för att hantera uppgiften. Vi välkomnar alla sökande men vi anser att erfarenhet inom handboll eller alternativ utbildning är meriterande.\n\n\nDu kommer vara tränare för ett eller flera av våra ungdomslag i handboll (spelare födda 2013-2006). Oavsett ålder på gruppen är målet att du ska skapa roliga träningar där spelarna utvecklas som handbollsspelare och individer.\n\n\nTräningarna äger rum på vardagkvällar och helgtid i skolor runt om kring i centrala Stockholm (Vasastan, Kungsholmen, Östermalm).\n\n\nErsättning utgår per timme baserat på primärt tidigare erfarenhet.\n\n\nSkicka gärna in din ansökan via mejl till: kevin.neeme@norrtullssk.se",
+      "text_formatted": "<p>Vi söker dig som vill ha ett extrajobb där du bland annat får utveckla dina ledaregenskaper. Du ska tycka om att jobba med barn och ungdomar och våga stå i centrum och leda en grupp. Att du är positiv och utåtriktad är ett stort plus för att hantera uppgiften. Vi välkomnar alla sökande men vi anser att erfarenhet inom handboll eller alternativ utbildning är meriterande.</p><p><br></p><p>Du kommer vara tränare för ett eller flera av våra ungdomslag i handboll (spelare födda 2013-2006). Oavsett ålder på gruppen är målet att du ska skapa roliga träningar där spelarna utvecklas som handbollsspelare och individer.</p><p><br></p><p>Träningarna äger rum på vardagkvällar och helgtid i skolor runt om kring i centrala Stockholm (Vasastan, Kungsholmen, Östermalm).</p><p><br></p><p>Ersättning utgår per timme baserat på primärt tidigare erfarenhet.</p><p><br></p><p>Skicka gärna in din ansökan via mejl till:&#xa0;kevin.neeme@norrtullssk.se</p>",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": null
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": null,
+    "duration": {
+      "concept_id": "a7uU_j21_mkL",
+      "label": "Tillsvidare",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "working_hours_type": {
+      "concept_id": "947z_JGS_Uk2",
+      "label": "Deltid",
+      "legacy_ams_taxonomy_id": "2"
+    },
+    "scope_of_work": {
+      "min": 20,
+      "max": 40
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": "www.norrtullssk.se",
+      "organization_number": "8020056159",
+      "name": "Norrtulls Sportklubb",
+      "workplace": "Norrtulls Sportklubb"
+    },
+    "application_details": {
+      "information": null,
+      "reference": "Jobbansökan handbollstränare",
+      "email": "kevin.neeme@norrtullssk.se",
+      "via_af": false,
+      "url": null,
+      "other": null
+    },
+    "experience_required": true,
+    "access_to_own_car": false,
+    "driving_license_required": false,
+    "driving_license": null,
+    "occupation": {
+      "concept_id": "vx4h_CjR_M1n",
+      "label": "Ungdomsinstruktör/Ungdomstränare",
+      "legacy_ams_taxonomy_id": "3512"
+    },
+    "occupation_group": {
+      "concept_id": "EA6o_N1N_QtT",
+      "label": "Idrottstränare och instruktörer m.fl.",
+      "legacy_ams_taxonomy_id": "3422"
+    },
+    "occupation_field": {
+      "concept_id": "MVqp_eS8_kDZ",
+      "label": "Pedagogiskt arbete",
+      "legacy_ams_taxonomy_id": "15"
+    },
+    "workplace_address": {
+      "municipality": "Stockholm",
+      "municipality_code": "0180",
+      "municipality_concept_id": "AvNB_uwa_6n6",
+      "region": "Stockholms län",
+      "region_code": "01",
+      "region_concept_id": "CifL_Rzy_Mku",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": "Tre Liljor 3",
+      "postcode": "11344",
+      "city": "Stockholm",
+      "coordinates": [
+        18.04570022804468,
+        59.34725696984969
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": []
+    },
+    "publication_date": "2020-02-27T15:43:19",
+    "last_publication_date": "2020-03-28T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_ANNONSERA",
+    "timestamp": 1582815655142
+  },
+  {
+    "id": "23904965",
+    "external_id": null,
+    "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/23904965",
+    "logo_url": "https://www.arbetsformedlingen.se/rest/arbetsgivare/rest/af/v3/arbetsplatser/87425671/logotyper/logo.png",
+    "headline": "Trädgårdsmästare",
+    "application_deadline": "2020-03-28T23:59:59",
+    "number_of_vacancies": 1,
+    "description": {
+      "text": "Vi söker en trädgårdsmästare till vårt skötselteam i Härnösand. Som trädgårdsmästare kommer dina arbetsuppgifter att vara\n\n\nformgivning nya planteringar\nförnya befintliga vegetationsytor\nbeskärning\ngrönyteskötsel\nplantering\nsommarblomsskötsel\nogräsrensning\nallmän kontroll av växter för att upptäcka eventuella säkerhetsrisker eller sjukdomsangrepp\n\n\n\nArbetsuppgifterna varieras utefter att säsongen fortlöper och även beroende på de arbetsuppdrag vi har för tillfället. Ett omväxlande arbete med andra ord som för en person med driv och ansvarstagande ger möjlighet att vara med att planera arbetet och fatta beslut som rör trädgårdsmästeri. Vi söker en person som är tillgänglig att arbeta heltid på vardagar mellan 07-16 under barmarkssäsong 2020 med möjlighet till förlängning. Under vintertid finns även möjlighet till timanställning inom snöröjning och halkbekämpning.\n\n\nVem söker vi?\nFör att jobba som trädgårdsmästare bör du ha god fysik, gilla utomhusarbete och ha ett öga för detaljer så att våra utemiljöer hålls i gott skick. Vi ser gärna att du är utbildad trädgårdsmästare eller har arbetslivserfarenhet som motsvarar en trädgårdsmästares kunskaper. Som person ser vi gärna att du är arbetsvillig, prestigelös och kan tänka dig olika sorters arbetsuppgifter. Du har god samarbetsförmåga men kan också arbeta självständigt.\nVi förflyttar oss mellan de olika skötselområdena med bil och därmed är det nödvändigt att du som söker har B-körkort.\n\n\nMeriterande kompetenser:\nUtökat B-kort\nFörarbevis Hjullastare\nHeta arbeten\nErfarenhet av invasiva arter\nMotorsågskörkort\nArbete på väg\nData vana\nSkylift utbildning\n\n\nLåter detta som något för dig? Vill du arbeta i en spännande miljö på ett företag som bokstavligen växer så det knakar? Tveka då inte, utan skicka in din ansökan redan idag!\nLite mer om företaget i stort:\nHöga Kusten Skog & Fastighet AB är ett entreprenadföretag inom fastighetsskötsel och skogsvård som vuxit kraftigt sedan starten 2013 och har nu uppåt 80 anställda under högsäsong och genomsnittligt ca 35 helårsanställda. Omsättningen har ökat från 3,2 mkr första året till en bit över 43 mkr för förra verksamhetsåret. Företaget finns i dagsläget etablerat på 6 orter från Sollentuna i Söder till huvudkontoret Örnsköldsvik i norr.",
+      "text_formatted": "<p>Vi söker en trädgårdsmästare till vårt skötselteam i Härnösand. Som trädgårdsmästare kommer dina arbetsuppgifter att vara</p><p><br></p><ul><li>formgivning nya planteringar</li><li>förnya befintliga vegetationsytor</li><li>beskärning</li><li>grönyteskötsel</li><li>plantering</li><li>sommarblomsskötsel</li><li>ogräsrensning</li><li>allmän kontroll av växter för att upptäcka eventuella säkerhetsrisker eller sjukdomsangrepp</li></ul><p><br></p><p>Arbetsuppgifterna varieras utefter att säsongen fortlöper och även beroende på de arbetsuppdrag vi har för tillfället. Ett omväxlande arbete med andra ord som för en person med driv och ansvarstagande ger möjlighet att vara med att planera arbetet och fatta beslut som rör trädgårdsmästeri. Vi söker en person som är tillgänglig att arbeta heltid på vardagar mellan 07-16 under barmarkssäsong 2020 med möjlighet till förlängning. Under vintertid finns även möjlighet till timanställning inom snöröjning och halkbekämpning.</p><p><br></p><p>Vem söker vi?</p><p>För att jobba som trädgårdsmästare bör du ha god fysik, gilla utomhusarbete och ha ett öga för detaljer så att våra utemiljöer hålls i gott skick. Vi ser gärna att du är utbildad trädgårdsmästare eller har arbetslivserfarenhet som motsvarar en trädgårdsmästares kunskaper. Som person ser vi gärna att du är arbetsvillig, prestigelös och kan tänka dig olika sorters arbetsuppgifter. Du har god samarbetsförmåga men kan också arbeta självständigt.</p><p>Vi förflyttar oss mellan de olika skötselområdena med bil och därmed är det nödvändigt att du som söker har B-körkort.</p><p><br></p><p>Meriterande kompetenser:</p><p>Utökat B-kort</p><p>Förarbevis Hjullastare</p><p>Heta arbeten</p><p>Erfarenhet av invasiva arter</p><p>Motorsågskörkort</p><p>Arbete på väg</p><p>Data vana</p><p>Skylift utbildning</p><p><br></p><p>Låter detta som något för dig? Vill du arbeta i en spännande miljö på ett företag som bokstavligen växer så det knakar? Tveka då inte, utan skicka in din ansökan redan idag!</p><p><strong>Lite mer om företaget i stort:</strong></p><p>Höga Kusten Skog &amp; Fastighet AB är ett entreprenadföretag inom fastighetsskötsel och skogsvård som vuxit kraftigt sedan starten 2013 och har nu uppåt 80 anställda under högsäsong och genomsnittligt ca 35 helårsanställda. Omsättningen har ökat från 3,2 mkr första året till en bit över 43 mkr för förra verksamhetsåret. Företaget finns i dagsläget etablerat på 6 orter från Sollentuna i Söder till huvudkontoret Örnsköldsvik i norr.</p>",
+      "company_information": null,
+      "needs": null,
+      "requirements": null,
+      "conditions": null
+    },
+    "employment_type": {
+      "concept_id": "PFZr_Syz_cUq",
+      "label": "Vanlig anställning",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_type": {
+      "concept_id": "oG8G_9cW_nRf",
+      "label": "Fast månads- vecko- eller timlön",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "salary_description": null,
+    "duration": {
+      "concept_id": "qQUd_4qe_NDT",
+      "label": "6 månader eller längre",
+      "legacy_ams_taxonomy_id": "2"
+    },
+    "working_hours_type": {
+      "concept_id": "6YE1_gAC_R2G",
+      "label": "Heltid",
+      "legacy_ams_taxonomy_id": "1"
+    },
+    "scope_of_work": {
+      "min": 100,
+      "max": 100
+    },
+    "access": null,
+    "employer": {
+      "phone_number": null,
+      "email": null,
+      "url": "www.hksf.se",
+      "organization_number": "5569255788",
+      "name": "Höga Kusten Skog & Fastighet AB",
+      "workplace": "Höga Kusten Skog & Fastighet AB Härnösand"
+    },
+    "application_details": {
+      "information": null,
+      "reference": "Trädgårdsmästare Härnösand",
+      "email": "Daniel.kjellsson@hksf.se",
+      "via_af": false,
+      "url": null,
+      "other": "mikael.nyberg@hksf.se"
+    },
+    "experience_required": true,
+    "access_to_own_car": false,
+    "driving_license_required": true,
+    "driving_license": [
+      {
+        "concept_id": "VTK8_WRx_GcM",
+        "label": "B"
+      }
+    ],
+    "occupation": {
+      "concept_id": "JZur_dmf_EPY",
+      "label": "Trädgårdsmästare, anläggning",
+      "legacy_ams_taxonomy_id": "4568"
+    },
+    "occupation_group": {
+      "concept_id": "XBh3_Xrm_C4R",
+      "label": "Trädgårdsanläggare m.fl.",
+      "legacy_ams_taxonomy_id": "6113"
+    },
+    "occupation_field": {
+      "concept_id": "VuuL_7CH_adj",
+      "label": "Naturbruk",
+      "legacy_ams_taxonomy_id": "13"
+    },
+    "workplace_address": {
+      "municipality": "Härnösand",
+      "municipality_code": "2280",
+      "municipality_concept_id": "uYRx_AdM_r4A",
+      "region": "Västernorrlands län",
+      "region_code": "22",
+      "region_concept_id": "NvUF_SP1_1zo",
+      "country": "Sverige",
+      "country_code": "199",
+      "country_concept_id": "i46j_HmG_v64",
+      "street_address": null,
+      "postcode": null,
+      "city": null,
+      "coordinates": [
+        null,
+        null
+      ]
+    },
+    "must_have": {
+      "skills": [],
+      "languages": [
+        {
+          "weight": 10,
+          "concept_id": "zSLA_vw2_FXN",
+          "label": "Svenska",
+          "legacy_ams_taxonomy_id": "502"
+        }
+      ],
+      "work_experiences": []
+    },
+    "nice_to_have": {
+      "skills": [],
+      "languages": [],
+      "work_experiences": [
+        {
+          "weight": 5,
+          "concept_id": "JZur_dmf_EPY",
+          "label": "Trädgårdsmästare, anläggning",
+          "legacy_ams_taxonomy_id": "4568"
+        }
+      ]
+    },
+    "publication_date": "2020-02-27T12:44:24",
+    "last_publication_date": "2020-03-28T23:59:59",
+    "removed": false,
+    "removed_date": null,
+    "source_type": "VIA_ANNONSERA",
+    "timestamp": 1582815664929
+  }
+]

@@ -34,12 +34,7 @@ with
         | x -> Decode.Fail.arrExpected x
   static member ToJson ({adId=adId;languages=languages}) =
     JArray [ toJson adId; toJson languages ]
-  (*
-  static member JsonObjCodec =
-      fun id l -> { adId = id; languages=l }
-      <!> jreq  "id" (Some << fun x -> x.adId)
-      <*> jreq  "langs"  (Some << fun x -> x.languages)
-  *)
+
 module AdAndLanguage=
   /// sum ad and language list to count of languages
   let sumList (adAndLanguages:AdAndLanguage list)=
@@ -77,7 +72,7 @@ module Polly=
 module AdRepository=
 
   let tryFetchAdToAndPersist a (repository:IAdRepository)=async{
-    let id = Annons.id a
+    let id = Ad.id a
     let! alreadyFetched= repository.Contains(id)
     if not alreadyFetched then
       match! Annons.tryDownload a with
@@ -251,10 +246,10 @@ let main argv =
     let repositories =
       let repos = [
         Option.map createPgRepository args.PGConn
-        Option.map Repositories.fileSystem args.Dir
+        Option.map ((flip Repositories.fileSystem) "data") args.Dir
       ]
       let list = List.choose id repos
-      if List.isEmpty list then Repositories.fileSystem defaultDir
+      if List.isEmpty list then Repositories.fileSystem defaultDir "data"
       else List.reduce Repositories.leftCombine list
     match args with
     | { Command=Some command; PGConn=conn } ->
@@ -274,7 +269,7 @@ let main argv =
       | Cmd.syncsql ->
         match conn with
         | Some conn->
-          let fsRepository = Repositories.fileSystem dir
+          let fsRepository = Repositories.fileSystem dir "data"
           let sqlRepository = createPgRepository conn
           Async.RunSynchronously( AdRepository.syncRepositories fsRepository sqlRepository)
           0

@@ -13,7 +13,7 @@ module Fs=
                                 "..", "..", "..", "..", "..","..",
                                 "tmp", "fs", Guid.NewGuid().ToString("N")))
     Directory.CreateDirectory(Path.Combine(dir, "data")) |> ignore
-    let _persist = Repositories.fileSystem dir
+    let _persist = Repositories.fileSystem dir "data"
     for i = 1 to 100 do
       do! _persist.Store(string i, RawAd << string <| i)
 

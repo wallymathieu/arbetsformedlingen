@@ -8,7 +8,6 @@ let commonHeaders = [ "Accept", "application/json"; "Accept-Language", "sv"]
 type Annons = Ad
 
 module Annons=
-  let id (a:Annons)=a.id
   // /platsannonser/
   let url (a:Annons)= sprintf "http://api.arbetsformedlingen.se/af/v0/platsannonser/%s" a.id
   let tryDownload a=async{

@@ -25,8 +25,8 @@ let leftCombine (a:IAdRepository) (b:IAdRepository) =
     }
   }
 /// Repository in filesystem
-let fileSystem dir=
-  let filename id = Path.Combine(dir, "data", sprintf "%s.json" id)
+let fileSystem dir name=
+  let filename id = Path.Combine(dir, name, sprintf "%s.json" id)
   let readAllTextAsync (file:string) = async{
     use f=File.OpenText file
     return! Async.AwaitTask(f.ReadToEndAsync()) }
@@ -46,14 +46,14 @@ let fileSystem dir=
     member __.List() = async{
       let getFileContent (file:string) = readAllTextAsync file
       let files = ResizeArray()
-      for file in Directory.GetFiles(Path.Combine(dir, "data"), "*.json") do
+      for file in Directory.GetFiles(Path.Combine(dir, name), "*.json") do
         let! content = getFileContent file
         RawAd content |> files.Add
       return (files |>  Seq.toList)
     }
     member __.Ids() = async{
       let getFileContent (file:string) = readAllTextAsync file
-      let ids =seq { for file in Directory.GetFiles(Path.Combine(dir, "data"), "*.json") do yield Path.GetFileNameWithoutExtension file }
+      let ids =seq { for file in Directory.GetFiles(Path.Combine(dir, name), "*.json") do yield Path.GetFileNameWithoutExtension file }
       return (ids |> Seq.toList)
     }
     member __.Contains id = async{ return File.Exists (filename id) }
