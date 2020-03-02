@@ -19,7 +19,7 @@ module JobtechDev=
                       |> choose DateTime.fromFileName
                       |> Array.max
     let nextFileName = DateTime.toFileName DateTime.UtcNow
-    let! next = Platsannonser.stream (maxDateTime.AddHours -1.0 ) // slight overlap
+    let! next = Platsannonser.stream (maxDateTime.AddMinutes -1.0 ) // slight overlap
     do! Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(datadir, nextFileName), next.RawStream))
   }
 [<Diagnostics.CodeAnalysis.SuppressMessage("*", "EnumCasesNames")>]
