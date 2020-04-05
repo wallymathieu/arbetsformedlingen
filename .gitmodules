@@ -1,0 +1,3 @@
+[submodule "ontology-files"]
+	path = ontology-files
+	url = git@github.com:JobtechSwe/ontology-files.git
