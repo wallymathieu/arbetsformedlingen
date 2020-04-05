@@ -22,9 +22,11 @@ module JobtechDev=
     let! next = Platsannonser.stream (maxDateTime.AddMinutes -1.0 ) // slight overlap
     do! Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(datadir, nextFileName), next.RawStream))
   }
+// fsharplint:disable
 [<Diagnostics.CodeAnalysis.SuppressMessage("*", "EnumCasesNames")>]
 type Cmd=
   |fetch=0
+// fsharplint:enable
 type CmdArgs =
   { Command: Cmd option; Dir: string option; }
 open FSharpPlus

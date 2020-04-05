@@ -153,6 +153,7 @@ module Old=
               |> String.concat "\n"
     do! Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(dir, "list-words.txt"), txt))
   }
+// fsharplint:disable
 [<Diagnostics.CodeAnalysis.SuppressMessage("*", "EnumCasesNames")>]
 type Cmd=
   |fetch=0
@@ -160,6 +161,7 @@ type Cmd=
   |sum=2
   |writeLangCount=3
   |syncsql=4
+// fsharplint:enable
 type CmdArgs =
   { Command: Cmd option; Dir: string option; PGConn: string option }
 open FSharpPlus
