@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stacka.Languages\Stacka.Languages.fsproj" />
+    <PackageReference Include="FSharp.Data" Version="3.3.3" />
+    <PackageReference Include="Fleece.FSharpData" Version="0.8.0-alpha-3" />
+    <PackageReference Include="FSharpPlus" Version="1.1.0-RC4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stacka\Stacka.fsproj" />
+  </ItemGroup>
+
+</Project>

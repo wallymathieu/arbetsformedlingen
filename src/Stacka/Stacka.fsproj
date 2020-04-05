@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Library.fs" />
@@ -10,6 +10,6 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="3.3.31.15" />
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
-    <PackageReference Include="FSharpPlus" Version="1.1.0-RC2" />
+    <PackageReference Include="FSharpPlus" Version="1.1.0-RC4" />
   </ItemGroup>
 </Project>
