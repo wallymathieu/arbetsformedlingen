@@ -12,7 +12,7 @@
     <ProjectReference Include="..\Stacka.Languages\Stacka.Languages.fsproj" />
     <PackageReference Include="FSharp.Data" Version="3.3.3" />
     <PackageReference Include="Fleece.FSharpData" Version="0.8.0-alpha-3" />
-    <PackageReference Include="FSharpPlus" Version="1.1.0-RC4" />
+    <PackageReference Include="FSharpPlus" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,6 +10,6 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="3.3.31.15" />
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
-    <PackageReference Include="FSharpPlus" Version="1.1.0-RC4" />
+    <PackageReference Include="FSharpPlus" Version="1.1.0" />
   </ItemGroup>
 </Project>
