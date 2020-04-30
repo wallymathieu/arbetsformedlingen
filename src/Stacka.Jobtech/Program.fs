@@ -3,29 +3,57 @@ open System.IO
 open System.Net
 
 open Stacka
+open Stacka.IO
 open Stacka.Languages
 open Stacka.Repositories
 open Stacka.Jobtech
+open Stacka.AdsAndLanguages
 open Stacka.Jobtech.Integration
 
 open FSharp.Data
 open FSharpPlus.Data
 open FSharpPlus.Operators
+open Stacka.Jobtech.Integration
 
 module JobtechDev=
-  let fetchLatest dir=async{
+  let fetchLatest dir = async{
     let datadir = Path.Combine(dir,"jobtech")
     let maxDateTime = Directory.GetFiles datadir
                       |> choose DateTime.fromFileName
                       |> Array.max
     let nextFileName = DateTime.toFileName DateTime.UtcNow
     let! next = Platsannonser.stream (maxDateTime.AddMinutes -1.0 ) // slight overlap
-    do! Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(datadir, nextFileName), next.RawStream))
+    do! File.writeAllTextAsync (Path.Combine(datadir, nextFileName)) next.RawStream
   }
+  let data dir = async{
+    let ads = ResizeArray()
+    let notRemoved = not << Annons.isRemoved
+    for file in Directory.GetFiles(Path.Combine(dir, "jobtech"), "*.json") do
+      let! content = File.readAllTextAsync file
+      let parsed = JsonT.Parse content |> Array.filter notRemoved |> Array.map Annons.mapFromJobtech
+      parsed |> ads.AddRange
+    return ads |> Seq.distinctBy (fst >> Annons.id) |> Seq.toList
+  }
+  let batch dir = async{
+    let! maybeLangs = AdAndLanguage.ofFile dir
+    match maybeLangs with
+    | Ok langs->
+      let ids=langs |> List.map AdAndLanguage.adId |> Set.ofList
+      let knownId id = Set.contains id ids
+      let notKnownId = not << knownId << (fst >> Annons.id)
+      let! all = data dir
+      let adAndLanguages = all |> List.filter notKnownId |> List.map AdAndLanguage.ofAnnonsWithText
+      do! AdAndLanguage.toFile dir (List.append langs (List.ofSeq adAndLanguages))
+    | Error err->printfn "Failed to retreive langs %A" err
+  }
+  let sum dir= AdAndLanguage.sumDir dir
+
 // fsharplint:disable
 [<Diagnostics.CodeAnalysis.SuppressMessage("*", "EnumCasesNames")>]
 type Cmd=
   |fetch=0
+  |batch=1
+  |sum=2
 // fsharplint:enable
 type CmdArgs =
   { Command: Cmd option; Dir: string option; }
@@ -68,6 +96,11 @@ let main argv =
       | Cmd.fetch ->
         Async.RunSynchronously( JobtechDev.fetchLatest dir)
         0
+      | Cmd.batch ->
+        Async.RunSynchronously( JobtechDev.batch dir)
+        0
+      | Cmd.sum ->
+         runSynchronouslyAndPrintResult (JobtechDev.sum dir)
       | _ ->
         printfn "error: Expected valid command"
         printfn "%s" usage

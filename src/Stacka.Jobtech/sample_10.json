@@ -1206,5 +1206,6 @@
     "removed_date": null,
     "source_type": "VIA_ANNONSERA",
     "timestamp": 1582815664929
-  }
+  },
+  {"id": 23800448, "removed": true, "removed_date": "2020-02-28T03:11:33"},{"id": 23819490, "removed": true, "removed_date": "2020-02-28T03:11:34"},{"id": 23613942, "removed": true, "removed_date": "2020-02-28T03:10:15"},{"id": 23819075, "removed": true, "removed_date": "2020-02-28T03:11:33"},{"id": 23819216, "removed": true, "removed_date": "2020-02-28T03:11:33"},{"id": 23819917, "removed": true, "removed_date": "2020-02-28T03:11:34"},{"id": 23819628, "removed": true, "removed_date": "2020-02-28T03:11:34"},{"id": 23819594, "removed": true, "removed_date": "2020-02-28T03:11:34"},{"id": 23819643, "removed": true, "removed_date": "2020-02-28T03:11:35"},{"id": 23819778, "removed": true, "removed_date": "2020-02-28T03:11:35"},{"id": 23819779, "removed": true, "removed_date": "2020-02-28T03:11:35"},{"id": 23819590, "removed": true, "removed_date": "2020-02-28T03:11:35"},{"id": 23819811, "removed": true, "removed_date": "2020-02-28T03:11:35"},{"id": 23819562, "removed": true, "removed_date": "2020-02-28T03:11:35"}
 ]

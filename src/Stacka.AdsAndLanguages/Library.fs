@@ -1,9 +1,12 @@
 ﻿namespace Stacka.AdsAndLanguages
 open Stacka.Languages
 open Stacka
+open Stacka.IO
+
 open Fleece
 open Fleece.FSharpData
 open Fleece.FSharpData.Operators
+
 open FSharp.Data
 open FSharpPlus.Data
 open System.IO
@@ -23,6 +26,8 @@ with
     JArray [ toJson adId; toJson languages ]
 
 module AdAndLanguage=
+  let adId (a:AdAndLanguage)=a.adId
+  let languages (a:AdAndLanguage)=a.languages
   /// sum ad and language list to count of languages
   let sumList (adAndLanguages:AdAndLanguage list)=
     adAndLanguages
@@ -50,4 +55,13 @@ module AdAndLanguage=
     let path = Path.Combine(dir,"langs.json")
     let! content= Async.AwaitTask (File.ReadAllTextAsync path)
     return parseJson content
+  }
+  let sumDir dir=async {
+    let! content = File.readAllTextAsync (Path.Combine(dir,"langs.json") )
+    let maybeAdAndLanguages : AdAndLanguage list ParseResult = ofJson (JsonValue.Parse content)
+    match maybeAdAndLanguages with
+    | Ok adAndLanguages ->
+      let l= sumList adAndLanguages
+      return Ok (toJson l |> string)
+    | Error err-> return Error err
   }
