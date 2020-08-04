@@ -25,6 +25,16 @@ with
   static member ToJson ({adId=adId;languages=languages}) =
     JArray [ toJson adId; toJson languages ]
 
+module AdAndText=
+  let inline toIdAndWords ((a,text): WithText<_>)=
+      let splitOnChars = Text.splitOnWSAndPunctuationChars
+      let words= splitOnChars (getTitle a)
+                 @ splitOnChars text
+                 |> List.map (fun s->s.ToLower())
+                 |> List.distinct
+      (getId a, words)
+
+
 module AdAndLanguage=
   let adId (a:AdAndLanguage)=a.adId
   let languages (a:AdAndLanguage)=a.languages
@@ -37,8 +47,6 @@ module AdAndLanguage=
     //
     |> List.sortByDescending (fun (_,l)->l)
 
-  let inline getId(r:^a) = ( ^a : ( member get_id: unit->string ) (r) )
-  let inline getTitle(r:^a) = ( ^a : ( member get_title: unit->string ) (r) )
 
   let inline ofAnnonsWithText ((a,text): WithText<_>)=
     let splitOnChars = Text.splitOnWSAndPunctuationChars
@@ -65,3 +73,20 @@ module AdAndLanguage=
       return Ok (toJson l |> string)
     | Error err-> return Error err
   }
+
+  let inline countLangAndWords (adsWithWords: (string * string List) List) (adsWithLanguages:AdAndLanguage List)=
+    let adIdLangsAndWords = query {
+      for adWithL in adsWithLanguages do
+      join (adId,words) in adsWithWords on (adWithL.adId = adId)
+      select (adWithL.adId, adWithL.languages, words)
+    }
+    let counts = query {
+      for (_,langs,words) in adIdLangsAndWords do
+      for lang in langs do
+      for word in words do
+      where (lang <> word)
+      groupBy (lang,word) into g
+      select (g.Key, Seq.length g)
+    }
+    counts |> Seq.toList
+
