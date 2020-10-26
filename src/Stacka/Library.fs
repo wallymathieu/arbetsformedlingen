@@ -17,6 +17,10 @@ module Ad =
 open System.IO
 open System.Globalization
 open FSharpPlus
+[<AutoOpen>]
+module Operators=
+  let inline getId(r:^a) = ( ^a : ( member get_id: unit->string ) (r) )
+  let inline getTitle(r:^a) = ( ^a : ( member get_title: unit->string ) (r) )
 
 module DateTime=
   let private tupleToOption x = match x with true, value -> Some value | _ -> None

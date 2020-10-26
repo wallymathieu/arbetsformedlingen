@@ -3,7 +3,9 @@ open System.IO
 open System.Net
 
 open Stacka
+open Stacka.IO
 open Stacka.Languages
+open Stacka.AdsAndLanguages
 open Stacka.Repositories
 open Stacka.Arbetsformedlingen
 open Stacka.Arbetsformedlingen.Integration
@@ -20,47 +22,6 @@ module RawAd=
   let toAnnonsWithText (RawAd content)=
     let t = Annons.Complete.Parse content
     Annons.mapComplete t.Platsannons.Annons
-
-type AdAndLanguage = {adId:string ; languages: string list}
-with
-  static member OfJson json =
-        match json with
-        | JArray arr when arr.Count=2 ->
-          match ofJson (arr.Item 0), ofJson (arr.Item 1) with
-          | (Ok adId),(Ok languages)->
-            Ok { adId = adId; languages= languages }
-          | (Error err),_ -> Error err
-          | _,(Error err) -> Error err
-        | x -> Decode.Fail.arrExpected x
-  static member ToJson ({adId=adId;languages=languages}) =
-    JArray [ toJson adId; toJson languages ]
-
-module AdAndLanguage=
-  /// sum ad and language list to count of languages
-  let sumList (adAndLanguages:AdAndLanguage list)=
-    adAndLanguages
-    |> List.collect (fun {languages=list}->list)
-    |> List.groupBy (fun s->s.ToLower())
-    |> List.map (fun (s,l)->(s, l.Length))
-    //
-    |> List.sortByDescending (fun (_,l)->l)
-
-  let ofAnnonsWithText ((a,text): WithText<Annons>)=
-    let splitOnChars = Text.splitOnWSAndPunctuationChars
-    let onlyLangs = List.filter (fun s->Set.contains s ProgrammingLanguages.wikipediaSet )
-    {adId= a.id
-     languages= splitOnChars (ProgrammingLanguages.translateVariants a.title)
-               @ splitOnChars (ProgrammingLanguages.translateVariants text)
-     |> List.map (fun s->s.ToLower())
-     |> onlyLangs |> List.distinct}
-
-  let toFile dir (adAndLanguages:AdAndLanguage list)=
-    Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(dir,"langs.json"), toJson adAndLanguages |> string))
-  let ofFile dir :AdAndLanguage list ParseResult Async= async {
-    let path = Path.Combine(dir,"langs.json")
-    let! content= Async.AwaitTask (File.ReadAllTextAsync path)
-    return parseJson content
-  }
 
 
 type WordCount=string * int
@@ -88,7 +49,8 @@ module AdRepository=
   let retryFourTimes =
     Policy
       .Handle<Exception>()
-      .WaitAndRetryAsync([TimeSpan.FromMilliseconds(100.0);TimeSpan.FromMilliseconds(500.0);TimeSpan.FromSeconds(3.0);TimeSpan.FromSeconds(7.0);])
+      .WaitAndRetryAsync([TimeSpan.FromMilliseconds 100.0; TimeSpan.FromMilliseconds 500.0;
+                          TimeSpan.FromSeconds 3.0; TimeSpan.FromSeconds 7.0;])
 
   let fetchListAndAds (repository:IAdRepository) dir = async{
     let fetchList (yrkesId) =
@@ -153,15 +115,7 @@ module AdRepository=
     let! adAndLanguages = getLangCount repository
     do! AdAndLanguage.toFile dir adAndLanguages
   }
-  let sum dir=async {
-    let! content = Async.AwaitTask (File.ReadAllTextAsync (Path.Combine(dir,"langs.json") ))
-    let maybeAdAndLanguages : AdAndLanguage list ParseResult = ofJson (JsonValue.Parse content)
-    match maybeAdAndLanguages with
-    | Ok adAndLanguages ->
-      let l= AdAndLanguage.sumList adAndLanguages
-      return Ok (toJson l |> string)
-    | Error err-> return Error err
-  }
+  let sum dir= AdAndLanguage.sumDir dir
   let syncRepositories (ra:IAdRepository) (rb:IAdRepository)=async{
     let! ids = ra.Ids()
     for id in ids do
@@ -179,20 +133,21 @@ module Old=
     let langTags = adAndLanguages
                    |> List.map (fun {adId=id;languages=list}-> sprintf "%s : %s" id (String.concat ", " list) )
                    |> String.concat "\n"
-    do! Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(dir,"langs.txt"), langTags))
+    do! File.writeAllTextAsync (Path.Combine(dir,"langs.txt")) langTags
     let txt =adAndLanguages
               |> AdAndLanguage.sumList
               |> List.map (fun (s,l)-> sprintf "%d : %s" l s )
               |> String.concat "\n"
-    do! Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(dir,"list-langs.txt"), txt))
+    do! File.writeAllTextAsync (Path.Combine(dir,"list-langs.txt")) txt
     let! wordCounts = AdRepository.getWordCount repository
     let txt =wordCounts
               |> List.filter ((<) 1 << snd)
               |> List.sortByDescending snd
               |> List.map (fun (s,l)-> sprintf "%d : %s" l s )
               |> String.concat "\n"
-    do! Async.AwaitTask (File.WriteAllTextAsync (Path.Combine(dir, "list-words.txt"), txt))
+    do! File.writeAllTextAsync (Path.Combine(dir, "list-words.txt")) txt
   }
+// fsharplint:disable
 [<Diagnostics.CodeAnalysis.SuppressMessage("*", "EnumCasesNames")>]
 type Cmd=
   |fetch=0
@@ -200,6 +155,7 @@ type Cmd=
   |sum=2
   |writeLangCount=3
   |syncsql=4
+// fsharplint:enable
 type CmdArgs =
   { Command: Cmd option; Dir: string option; PGConn: string option }
 open FSharpPlus

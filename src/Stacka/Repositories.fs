@@ -4,6 +4,7 @@ open System.IO
 open System.Threading.Tasks
 open System.Net
 open FSharpPlus
+open Stacka.IO
 
 type IAdRepository=interface
   abstract member Get: string -> Async<RawAd option>
@@ -27,13 +28,6 @@ let leftCombine (a:IAdRepository) (b:IAdRepository) =
 /// Repository in filesystem
 let fileSystem dir name=
   let filename id = Path.Combine(dir, name, sprintf "%s.json" id)
-  let readAllTextAsync (file:string) = async{
-    use f=File.OpenText file
-    return! Async.AwaitTask(f.ReadToEndAsync()) }
-  let writeAllTextAsync (file:string, content:string) = async{
-    use f=File.OpenWrite file
-    use w=new StreamWriter(f)
-    return! Async.AwaitTask(w.WriteAsync(content)) }
   { new IAdRepository with
     member __.Get id = async{
       let file = filename id
@@ -44,20 +38,18 @@ let fileSystem dir name=
         return None
     }
     member __.List() = async{
-      let getFileContent (file:string) = readAllTextAsync file
       let files = ResizeArray()
       for file in Directory.GetFiles(Path.Combine(dir, name), "*.json") do
-        let! content = getFileContent file
+        let! content = File.readAllTextAsync file
         RawAd content |> files.Add
       return (files |>  Seq.toList)
     }
     member __.Ids() = async{
-      let getFileContent (file:string) = readAllTextAsync file
       let ids =seq { for file in Directory.GetFiles(Path.Combine(dir, name), "*.json") do yield Path.GetFileNameWithoutExtension file }
       return (ids |> Seq.toList)
     }
     member __.Contains id = async{ return File.Exists (filename id) }
-    member __.Store(id, RawAd ad) = writeAllTextAsync (filename id, ad)
+    member __.Store(id, RawAd ad) = File.writeAllTextAsync (filename id) ad
   }
 /// Repository on top of S3 bucket
 open Amazon.S3

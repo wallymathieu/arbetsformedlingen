@@ -12,9 +12,11 @@ module Annons=
   let id (a:Annons)=a.id
   // /platsannonser/
   type JBAd=JsonT.Root
+  let isRemoved (a:JBAd) = a.Removed
   let mapFromJobtech (a:JBAd) : Annons WithText= (
-    ({id=string a.Id; title=a.Headline; url=a.WebpageUrl; relevans=100; source=a.SourceType}),
-    a.Description.Text)
+    ({id=string a.Id; title=Option.defaultValue "" a.Headline; url=Option.defaultValue "" a.WebpageUrl
+      relevans=10; source=Option.defaultValue "" a.SourceType}),
+    match a.Description with |Some desc->desc.Text|None->"")
 
 type Platsannonser = {RawStream: string}
 with

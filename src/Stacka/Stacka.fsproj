@@ -1,15 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Library.fs" />
     <Compile Include="Text.fs" />
+    <Compile Include="IO.fs" />
     <Compile Include="Repositories.fs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.0" />
     <PackageReference Include="AWSSDK.S3" Version="3.3.31.15" />
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
-    <PackageReference Include="FSharpPlus" Version="1.1.0-RC2" />
+    <PackageReference Include="FSharpPlus" Version="1.1.0" />
   </ItemGroup>
 </Project>
