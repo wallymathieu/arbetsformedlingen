@@ -9,7 +9,7 @@
     <Compile Include="Repositories.fs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="FSharp.Core" Version="4.7.0" />
+    <PackageReference Update="FSharp.Core" Version="4.7.2" />
     <PackageReference Include="AWSSDK.S3" Version="3.3.31.15" />
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
     <PackageReference Include="FSharpPlus" Version="1.1.0" />

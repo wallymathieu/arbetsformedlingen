@@ -13,7 +13,7 @@
     <PackageReference Include="FSharp.Data" Version="3.3.3" />
     <PackageReference Include="Fleece.FSharpData" Version="0.8.0-alpha-3" />
     <PackageReference Include="FSharpPlus" Version="1.1.0" />
-    <PackageReference Update="FSharp.Core" Version="4.7.0" />
+    <PackageReference Update="FSharp.Core" Version="4.7.2" />
   </ItemGroup>
 
   <ItemGroup>
